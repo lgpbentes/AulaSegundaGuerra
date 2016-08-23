@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<title>Atividade 1: Avaliando a produção cultural</title>
+</head>
+<body>
+<div class="container" id="texto">
+	<h1>Atividade 1: Avaliando a produção cultural</h1>
+	<p>Vamos avaliar a produção cultural que emergiu no mundo entre guerras, analisando a imagem do pintor Alemão OTTOR DIX ( O vendedor de fósforo)
+	</p>
+	<img src="images/img6.jpeg" width="400" height="400">
+	<p>O vendedor de fósforos (1920), é uma obra de Otto Dix que está exposta na Alemanha, no Kunstmuseum, em Stuttgart.</p>
+	<button onclick="carregaResposta()" type="button" class="btn btn-success">Exibir significado</button></br></br>
+	<div id="resposta" style="display: none;">
+		<p>Nessa pintura Dix expõe, quase fotograficamente, o descaso dos passantes diante do sofrimento de um ex-soldado cego e paralítico. A produção dessa fase do artista constitui uma espécie de crônica ácida e indignada do ambiente alemão do período, o que vale a sua prisão em 1939 e a condenação de sua obra como arte degenerada.</p>
+
+		<p>O pintor e gravador alemão Otto Dix (1891-1969), ao lado do pintor e desenhista, também alemão, George Grosz (1893-1959), são considerados os dois grandes nomes dessa linhagem expressionista. A obra de Dix flagra a hipocrisia e frivolidade da sociedade berlinense do pós-guerra.</p>
+	</div>
+</div>
+</body>
+
+<style type="text/css">
+	#texto{
+		background-color: white;
+		font-size: 20px;
+		width: 800px;
+		margin: 0px auto;
+		padding: 15px;
+
+	}
+
+	img{
+		display: block;    
+		margin: 0 auto;
+	}
+</style>
+
+<script type="text/javascript">
+	function carregaResposta() {
+		document.getElementById("resposta").style.display = "inline-block"
+	}
+</script>
+
+</html>
