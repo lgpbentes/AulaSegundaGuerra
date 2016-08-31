@@ -1,0 +1,41 @@
+{
+	"chapter": "1",
+	"title": "Consequências da 1ª Guerra Mundial",
+	"itens":[
+		{
+			"id-item": "1-1",
+			"title-item": "Os efeitos da Primeira Guerra Mundial", 
+			"href": "conteudo/capitulo1/EfeitosPrimeiraGuerraMundial.pdf"
+		},
+		{
+			"id-item": "1-2",
+			"title-item": "Leitura: 1ª Guerra Mundial Consequências",
+			"href": "conteudo/capitulo1/leitura1.html"
+		},
+		{
+			"id-item": "1-3",
+			"title-item": "Quebra da bolsa de valores",
+			"href": "conteudo/capitulo1/quebrabolsa.html"		
+		},
+		{
+			"id-item": "1-4",
+			"title-item": "A Alemanha \"derrotada\"",
+			"href": "conteudo/capitulo1/TratadoVersalhes.pdf"
+		},
+		{
+			"id-item": "1-5",
+			"title-item": "Atividade 1: Produção cultural",
+			"href": "conteudo/capitulo1/atividade1.html"
+		},
+		{
+			"id-item": "1-6",
+			"title-item": "Mapa ilustrativo: A primeira guerra",
+			"href": "conteudo/capitulo1/MapaIlustrativo.html"
+		},
+		{
+			"id-item": "1-7",
+			"title-item": "Questionário",
+			"href": "conteudo/capitulo1/questionario/questionario.html"
+		}
+	]
+}
