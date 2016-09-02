@@ -18,7 +18,7 @@ onload =  function(e){
 }
 
 function overflowTimer(){
-    idTela = getCookie("screen");
+   // idTela = getCookie("screen");
     var timestamp = new Date().getTime();
 
     if(debug) {
@@ -36,7 +36,8 @@ function overflowTimer(){
             tag: null,
             x: null,
             y: null,
-            id: idTela,
+       //     id: idTela,
+            classId: idClass,
         },
         function(data, status){
             // alert("Data: " + data + "\nStatus: " + status);
@@ -81,8 +82,8 @@ function listenClick(e){
     clearInterval(timer);
     timer = setInterval(overflowTimer, 2000);
     currentScreen = e.target.baseURI.split("/").slice(-1)[0];
-
-    idTela = getCookie("screen");
+    idClass = e.target.className;
+    //idTela = getCookie("screen");
     var timestamp = new Date().getTime();
 
     if(debug) {
@@ -108,7 +109,8 @@ function listenClick(e){
       tag: e.target.localName,
       x:e.screenX,
       y:e.screenY,
-      id: idTela,
+//      id: idTela,
+      classId: idClass,
     },
     function(data, status){
         // alert("Data: " + data + "\nStatus: " + status);
