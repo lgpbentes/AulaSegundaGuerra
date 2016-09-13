@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Caça-Palavras: Segunda Guerra Mundial</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="jquery-1.6.2.min.js"></script>
+        <script type="text/javascript" src="jquery-ui-1.8.16.custom.min.js"></script>
+        <script type="text/javascript" src="jquery.wordsearchgame.js"></script>
+       <script src="jquery.ui.touch-punch.min.js"></script>
+        <link  rel="stylesheet" type="text/css" href="jquery.wordsearchgame.css">
+        <h2>Exercite seus conhecimentos sobre a Segunda Guerra Mundial!</h2>
+        <p>Encontre a resposta das perguntas no caça-palavras abaixo</p>
+        <ul>
+            <li>Qual o nome dos dois lados dos combatentes?</li>
+            <li>Que grupo étnico foi principalmente afetado pelos nazistas?</li>
+            <li>Complete: Hiroshima e ______ foram as duas cidades atacadas por bombas atômicas.</li>
+            <li>Que pais era governado por Mussolini?</li>
+            <li>O Estados Unidos entrou na guerra motivado pelo ataque à _______?</li>
+            <li>Qual foi o primeiro país ocupado pelos alemães na Segunda Guerra?</li>
+        </ul>
+        <script>
+		$(document).ready( function () {
+            var words = "eixoealiado,judeus,nagasaki,italia,pearlhabor,polonia";
+
+			
+			//attach the game to a div
+			$("#theGrid").wordsearchwidget({"wordlist" : words,"gridsize" : 15});
+
+		});
+
+    
+        </script>
+        
+    </head>
+    <body>
+        <div id="theGrid"></div>
+
+    </body>
+</html>
