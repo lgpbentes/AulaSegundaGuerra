@@ -111,6 +111,7 @@ function listenClick(e){
         console.log(e.type);
         console.log("target id: " + e.target.id);
         console.log("target class: " + e.target.className);
+        console.log("selected option:", e.target.defaultValue);
         console.log(e.target.localName);
         console.log(e.timeStamp);
         console.log(e.which);
@@ -126,6 +127,7 @@ function listenClick(e){
       tag: e.target.localName,
       x:e.screenX,
       y:e.screenY,
+      alternativaSelecionada: e.target.defaultValue,
 //      id: idTela,
       classId: idClass,
     },
