@@ -3,7 +3,7 @@ var timer;
 var currentScreen = "conteudo.html";
 var multioption = {
     status: false,
-    id: "Q1-facil",
+    id: "Q1-easy",
     type: 'tip'
 }
 
@@ -58,6 +58,7 @@ function overflowTimer(){
                 multioption.status = true;
                 multioption.type = "question";
                 multioption.id = d.recommendation[0].recommendation;
+
             }
         });
 }
@@ -130,8 +131,23 @@ function listenClick(e){
     },
     function(data, status){
         // alert("Data: " + data + "\nStatus: " + status);
-        multioption.status = false;
-        multioption.div = "Q1-facil";
+        d = data;
+            
+        if (d.recommendation[0].recommendation.charAt(0) == "D"){
+            multioption.status = true;
+            multioption.type = "tip";
+            multioption.id = d.recommendation[0].recommendation;
+        }
+        if (d.recommendation[0].recommendation.charAt(0) == "C") {
+            multioption.status = true;
+            multioption.type = "content";
+            multioption.id = d.recommendation[0].recommendation;
+        }
+        if (d.recommendation[0].recommendation.charAt(0) == "Q") {
+            multioption.status = true;
+            multioption.type = "question";
+            multioption.id = "T" + d.recommendation[0].recommendation;
+        }
     });
 }
 
