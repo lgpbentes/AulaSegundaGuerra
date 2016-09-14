@@ -9,19 +9,17 @@
 	<script type="text/javascript" src="DataCollector.js"></script>
 	<title>Questionário Cilindro</title>
 </head>
-<body onload="carregar('outset')">
+<body onload="carregar('Q1-hard')">
 <div style="display: inline-block;">
-
-	<!-- div com localização das etapas 
-	<ul class="nav nav-pills" role="tablist">
-	  	<li role="presentation" ><a href="#">Início</a></li>
-	  	<li role="presentation" class="active"><a href="#">Perguntas</a></li>
-	  	<li role="presentation"><a href="#">Fim</a></li>
-	</ul>-->
 
 	<!-- menu lateral que deve listar as questões -->
 	<div class="container" id="menu">
-		
+		<h2>Exercício</h2>
+		<div>
+		  <a href="#" onclick="carregar('Q1-hard')" class="Q:1:H:1-1 list-group-item">Questão 1</a>
+		  <a href="#" onclick="carregar('Q2-hard')" class="Q:2:H:1-2 list-group-item">Questão 2</a>
+		  <a href="#" onclick="carregar('Q3-hard')" class="Q:3:H:1-3 list-group-item">Questão 3</a>
+		</div>
 	</div>
 
 	<div class="container" id="containerQuestion">
@@ -31,20 +29,6 @@
 	</div>
 
 	<!-- A partir daqui fica escondido -->
-	<div id="menuListaQuestoes">
-		<h2>Exercício</h2>
-		<div>
-		  <a href="#" onclick="carregar('Q1-hard')" class="Q:1:H:1-1 list-group-item">Questão 1</a>
-		  <a href="#" onclick="carregar('Q2-hard')" class="Q:2:H:1-2 list-group-item">Questão 2</a>
-		  <a href="#" onclick="carregar('Q3-hard')" class="Q:3:H:1-3 list-group-item">Questão 3</a>
-		</div>
-	</div>
-
-	<div id="outset">
-  		<h1>Vamos exercitar!</h1>
-  		<p>Responda as questões e verifique como está seu andamento nos estudos! Qualquer dúvida, chame o professor. Vamos lá :)</p>
-  		<p><a id="btnStart" class="Q:1:H:1-1 btn btn-primary btn-lg" href="#" onclick="iniciar('menuListaQuestoes','Q1-hard')" role="button">Iniciar</a></p>
-	</div>
 
 	<!-- Inicio da div de uma questão-->
 	<div class="question" id="Q1-hard">
@@ -371,11 +355,8 @@
 		visibility: hidden;
 	}
 
-	#outset{
-		visibility: hidden;
-	}
-
-	#menuListaQuestoes {
+	#D1-hard, #D1-easy, #D2-hard, #D2-easy, #D3-hard, #D3-easy,
+	#C1-hard, #C1-easy, #C2-hard, #C2-easy, #C3-hard, #C3-easy {
 		visibility: hidden;
 	}
 
@@ -392,21 +373,33 @@
 </style>
 <script type="text/javascript">
 	var containerQuestion = document.getElementById("containerQuestion");
-	var time = setInterval(verificar(),1000);
+	var time = setInterval(verificar,1000);
 
 	containerQuestion.innerHTML = document.getElementById('Q1-hard').innerHTML;
 
 	function iniciar(idMenu,idquestion){
 		var menu = document.getElementById('menu');
 		menu.innerHTML = document.getElementById(idMenu).innerHTML;
-		
 		containerQuestion.innerHTML = document.getElementById(idquestion).innerHTML;
 	}
 
 	function verificar() {
-		if (multioption.status == true) {
-			carregar(multioption.div);
+		
+		if (multioption.status == true && multioption.type == "question") {
+			carregar(multioption.id);
 		}
+		if (multioption.status == true && multioption.type == "tip") {
+			console.log("entrei na dica");
+			carregarBotoes(multioption.id);
+		}
+		if (multioption.status == true && multioption.type == "content") {
+			carregarBotoes(multioption.id);
+		}
+	}
+
+	function carregarBotoes(id) {
+		document.getElementById(id).style.visibility = 'visible';
+		multioption.status = false;
 	}
 
 	function carregar(id) {
@@ -415,6 +408,7 @@
 
 		//setando container da question para a questão clicada na lista
 		containerQuestion.innerHTML = question.innerHTML;
+		multioption.status = false;
 	}
 </script>
 </html>

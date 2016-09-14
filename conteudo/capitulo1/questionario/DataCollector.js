@@ -3,7 +3,8 @@ var timer;
 var currentScreen = "conteudo.html";
 var multioption = {
     status: false,
-    div: "Q1-facil"
+    id: "Q1-facil",
+    type: 'tip'
 }
 
 onload =  function(e){
@@ -40,9 +41,24 @@ function overflowTimer(){
             classId: idClass,
         },
         function(data, status){
-            // alert("Data: " + data + "\nStatus: " + status);
-            multioption.status = false;
-            multioption.div = "Q1-facil";
+            //console.log("PLAYER------Data: " + data + "\nStatus: " + status);
+            d = data;
+            
+            if (d.recommendation[0].recommendation.charAt(0) == "D"){
+                multioption.status = true;
+                multioption.type = "tip";
+                multioption.id = d.recommendation[0].recommendation;
+            }
+            if (d.recommendation[0].recommendation.charAt(0) == "C") {
+                multioption.status = true;
+                multioption.type = "content";
+                multioption.id = d.recommendation[0].recommendation;
+            }
+            if (d.recommendation[0].recommendation.charAt(0) == "Q") {
+                multioption.status = true;
+                multioption.type = "question";
+                multioption.id = d.recommendation[0].recommendation;
+            }
         });
 }
 
