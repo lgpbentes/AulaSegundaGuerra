@@ -1,5 +1,6 @@
 {
 	"chapter": "1",
+	"total-questions": "3",
 	"title": "Consequências da 1ª Guerra Mundial",
 	"itens":[
 		{
@@ -35,7 +36,32 @@
 		{
 			"id-item": "1-7",
 			"title-item": "Questionário",
-			"href": "conteudo/capitulo1/questionario/questionario.html"
+			"href": "conteudo/capitulo1/questionario/questionario.html",
+			"questions": 
+			[{
+				"id-question": "Q1-hard",
+				"right-answer": "b"
+			},
+			{
+				"id-question": "Q1-easy",
+				"right-answer": "a"
+			},
+			{
+				"id-question": "Q2-hard",
+				"right-answer": "b"
+			},
+			{
+				"id-question": "Q2-easy",
+				"right-answer": "c"
+			},
+			{
+				"id-question": "Q3-hard",
+				"right-answer": "b"
+			},
+			{
+				"id-question": "Q3-easy",
+				"right-answer": "e"
+			}]
 		}
 	]
 }
