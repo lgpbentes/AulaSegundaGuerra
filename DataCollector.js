@@ -15,7 +15,7 @@ onload =  function(e){
 		html[i].addEventListener("click", listenClick);
 	}
 
-    //timer = setInterval(overflowTimer, 2000);
+    timer = setInterval(overflowTimer, 2000);
 }
 
 function overflowTimer(){
@@ -38,7 +38,7 @@ function overflowTimer(){
             x: null,
             y: null,
        //     id: idTela,
-            classId: idClass,
+            classId: null
         },
         function(data, status){
             //console.log("PLAYER------Data: " + data + "\nStatus: " + status);
@@ -104,7 +104,7 @@ function listenClick(e){
     var timestamp = new Date().getTime();
 
     if(debug) {
-       /* console.log("-----------------");
+       console.log("-----------------");
         console.log(e);
         console.log("tela:" + currentScreen);
         console.log("x: " + e.screenX + " y: " + e.screenY);
@@ -115,7 +115,7 @@ function listenClick(e){
         console.log(e.target.localName);
         console.log(e.timeStamp);
         console.log(e.which);
-        console.log("DataCollector timestamp: "+timestamp); */
+        console.log("DataCollector timestamp: "+timestamp); 
     }
 
     $.post("http://localhost:5000/storage/1",
@@ -129,7 +129,7 @@ function listenClick(e){
       y:e.screenY,
       alternativaSelecionada: e.target.defaultValue,
 //      id: idTela,
-      classId: idClass,
+      classId: idClass
     },
     function(data, status){
         // alert("Data: " + data + "\nStatus: " + status);
