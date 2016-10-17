@@ -3,7 +3,8 @@ var timer;
 var currentScreen = "conteudo.html";
 var multioption = {
     status: false,
-    div: "Q1-facil"
+    id: "Q1-easy",
+    type: 'tip'
 }
 
 onload =  function(e){
@@ -14,7 +15,7 @@ onload =  function(e){
 		html[i].addEventListener("click", listenClick);
 	}
 
-    //timer = setInterval(overflowTimer, 2000);
+    timer = setInterval(overflowTimer, 2000);
 }
 
 function overflowTimer(){
@@ -22,9 +23,9 @@ function overflowTimer(){
     var timestamp = new Date().getTime();
 
     if(debug) {
-        console.log("-------after two seconds----------");
+       /* console.log("-------after two seconds----------");
         console.log("DataCollector timestamp: "+timestamp);
-        console.log("Tela Atual: "+currentScreen);
+        console.log("Tela Atual: "+currentScreen);*/
     }
 
     $.post("http://localhost:5000/storage/1",
@@ -37,12 +38,28 @@ function overflowTimer(){
             x: null,
             y: null,
        //     id: idTela,
-            classId: idClass,
+            classId: null
         },
         function(data, status){
-            // alert("Data: " + data + "\nStatus: " + status);
-            multioption.status = false;
-            multioption.div = "Q1-facil";
+            //console.log("PLAYER------Data: " + data + "\nStatus: " + status);
+            d = data;
+            
+            if (d.recommendation[0].recommendation.charAt(0) == "D"){
+                multioption.status = true;
+                multioption.type = "tip";
+                multioption.id = d.recommendation[0].recommendation;
+            }
+            if (d.recommendation[0].recommendation.charAt(0) == "C") {
+                multioption.status = true;
+                multioption.type = "content";
+                multioption.id = d.recommendation[0].recommendation;
+            }
+            if (d.recommendation[0].recommendation.charAt(0) == "Q") {
+                multioption.status = true;
+                multioption.type = "question";
+                multioption.id = d.recommendation[0].recommendation;
+
+            }
         });
 }
 
@@ -87,17 +104,18 @@ function listenClick(e){
     var timestamp = new Date().getTime();
 
     if(debug) {
-        console.log("-----------------");
+       console.log("-----------------");
         console.log(e);
         console.log("tela:" + currentScreen);
         console.log("x: " + e.screenX + " y: " + e.screenY);
         console.log(e.type);
         console.log("target id: " + e.target.id);
         console.log("target class: " + e.target.className);
+        console.log("selected option:", e.target.defaultValue);
         console.log(e.target.localName);
         console.log(e.timeStamp);
         console.log(e.which);
-        console.log("DataCollector timestamp: "+timestamp);
+        console.log("DataCollector timestamp: "+timestamp); 
     }
 
     $.post("http://localhost:5000/storage/1",
@@ -109,13 +127,29 @@ function listenClick(e){
       tag: e.target.localName,
       x:e.screenX,
       y:e.screenY,
+      alternativaSelecionada: e.target.defaultValue,
 //      id: idTela,
-      classId: idClass,
+      classId: idClass
     },
     function(data, status){
         // alert("Data: " + data + "\nStatus: " + status);
-        multioption.status = false;
-        multioption.div = "Q1-facil";
+        d = data;
+            
+        if (d.recommendation[0].recommendation.charAt(0) == "D"){
+            multioption.status = true;
+            multioption.type = "tip";
+            multioption.id = d.recommendation[0].recommendation;
+        }
+        if (d.recommendation[0].recommendation.charAt(0) == "C") {
+            multioption.status = true;
+            multioption.type = "content";
+            multioption.id = d.recommendation[0].recommendation;
+        }
+        if (d.recommendation[0].recommendation.charAt(0) == "Q") {
+            multioption.status = true;
+            multioption.type = "question";
+            multioption.id = "T" + d.recommendation[0].recommendation;
+        }
     });
 }
 

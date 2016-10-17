@@ -1,41 +1,67 @@
 {
 	"chapter": "1",
+	"total-questions": "3",
 	"title": "Consequências da 1ª Guerra Mundial",
 	"itens":[
 		{
 			"id-item": "1-1",
 			"title-item": "Os efeitos da Primeira Guerra Mundial", 
-			"href": "conteudo/capitulo1/EfeitosPrimeiraGuerraMundial.pdf"
+			"href": "EfeitosPrimeiraGuerraMundial.pdf"
 		},
 		{
 			"id-item": "1-2",
 			"title-item": "Leitura: 1ª Guerra Mundial Consequências",
-			"href": "conteudo/capitulo1/leitura1.html"
+			"href": "leitura1.html"
 		},
 		{
 			"id-item": "1-3",
 			"title-item": "Quebra da bolsa de valores",
-			"href": "conteudo/capitulo1/quebrabolsa.html"		
+			"href": "quebrabolsa.html"		
 		},
 		{
 			"id-item": "1-4",
 			"title-item": "A Alemanha \"derrotada\"",
-			"href": "conteudo/capitulo1/TratadoVersalhes.pdf"
+			"href": "TratadoVersalhes.pdf"
 		},
 		{
 			"id-item": "1-5",
 			"title-item": "Atividade 1: Produção cultural",
-			"href": "conteudo/capitulo1/atividade1.html"
+			"href": "atividade1.html"
 		},
 		{
 			"id-item": "1-6",
 			"title-item": "Mapa ilustrativo: A primeira guerra",
-			"href": "conteudo/capitulo1/MapaIlustrativo.html"
+			"href": "MapaIlustrativo.html"
 		},
 		{
 			"id-item": "1-7",
 			"title-item": "Questionário",
-			"href": "conteudo/capitulo1/questionario/questionario.html"
+			"href": "questionario.html",
+			"questions": 
+			[{
+				"id-question": "Q1-hard",
+				"right-answer": "b"
+			},
+			{
+				"id-question": "Q1-easy",
+				"right-answer": "a"
+			},
+			{
+				"id-question": "Q2-hard",
+				"right-answer": "b"
+			},
+			{
+				"id-question": "Q2-easy",
+				"right-answer": "c"
+			},
+			{
+				"id-question": "Q3-hard",
+				"right-answer": "b"
+			},
+			{
+				"id-question": "Q3-easy",
+				"right-answer": "e"
+			}]
 		}
 	]
 }
