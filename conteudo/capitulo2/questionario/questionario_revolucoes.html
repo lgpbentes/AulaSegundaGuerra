@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="DataCollector.js"></script>
+	<title>Questionário Revoluções</title>
+</head>
+<body onload="carregar('outset')">
+<div style="display: inline-block;">
+
+	<!-- div com localização das etapas 
+	<ul class="nav nav-pills" role="tablist">
+	  	<li role="presentation" ><a href="#">Início</a></li>
+	  	<li role="presentation" class="active"><a href="#">Perguntas</a></li>
+	  	<li role="presentation"><a href="#">Fim</a></li>
+	</ul>-->
+
+	<!-- menu lateral que deve listar as questões -->
+	<div class="container" id="menu">
+		
+	</div>
+
+	<div class="container" id="containerQuestion">
+
+	</div>
+
+	</div>
+
+	<!-- A partir daqui fica escondido -->
+	<div id="menuListaQuestoes">
+		<h2>Exercício</h2>
+		<div>
+		  <a href="#" onclick="carregar('Q1-hard')" class="Q:1:H:1-1 list-group-item">Questão 1</a>
+		  <a href="#" onclick="carregar('Q2-hard')" class="Q:2:H:1-2 list-group-item">Questão 2</a>
+		  <a href="#" onclick="carregar('Q3-hard')" class="Q:3:H:1-3 list-group-item">Questão 3</a>
+		</div>
+	</div>
+
+	<div id="outset">
+  		<h1>Vamos exercitar!</h1>
+  		<p>Responda as questões e verifique como está seu andamento nos estudos! Qualquer dúvida, chame o professor. Vamos lá :)</p>
+  		<p><a id="btnStart" class="Q:1:H:1-1 btn btn-primary btn-lg" href="#" onclick="iniciar('menuListaQuestoes','Q1-hard')" role="button">Iniciar</a></p>
+	</div>
+
+	<!-- Inicio da div de uma questão-->
+	<div class="question" id="Q1-hard">
+		<h1 class="Q:1:H:1-1">Questão 1</h1>
+
+		<p class="Q:1:H:1-1">Uma revolução pode ser identificada como sendo:</p>
+		<img class="Q:1:H:1-1" src="images/questao_1.png" width="100" height="100">
+		<div class="alternativas">
+			<div class="radio">
+			      <label><input class="Q:1:H:1-1" type="radio" name="1" value="A">a) Um movimento em favor de um povo que é descriminado por sua raça, cor, etnia ou religião.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:H:1-1" type="radio" name="1" value="B">b) Uma alteração violenta nas instituições econômica, cultural e social de uma nação, muitas vezes alcançadas através de uma rebelião ou motim.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:H:1-1" type="radio" name="1" value="C">c) Uma mudança radical dentro de uma sociedade, que ocorre a nível político, econômico, cultural e social, onde é estabelecida uma nova ordem.
+			      </label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:H:1-1" type="radio" name="1" value="D">d) Um movimento contra políticos que desejam implantar a ditadura.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:H:1-1" type="radio" name="1" value="E">e) AUma mudança radical dentro de uma sociedade, que ocorre a nível, econômico, cultural e social, onde é estabelecida uma nova ordem. Porém não é de cunho político.</label>
+			    </div>	
+		</div>
+		<button type="button" id="A1-hard" class="Q:1:H:1-1 btn btn-info btn-lg">Responder</button>
+		<button type="button" id="D1-hard" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q1-hard">Sugestão</button>
+		<button type="button" id="C1-hard" class="btn btn-info btn-lg">Voltar ao conteúdo</button>
+	</div>
+	<!-- Fim da div de uma questão-->
+
+	<div id="tip-Q1-hard" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="D:1:H:1-1 close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Sugestão do exercício</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img src="dica_q1.jpg">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="D:1:H:1-1 btn btn-default " data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Inicio da div de uma questão-->
+	<div class="question" id="Q1-easy">
+		<h1 class="Q:1:E:1-1">Questão 1</h1>
+
+		<p class="Q:1:E:1-1">O que é uma "Revolução"?</p>
+		<img class="Q:1:E:1-1" src="images/questao_1.png" width="100" height="100">
+		<div class="alternativas">
+			<div class="radio">
+			      <label><input class="Q:1:E:1-1" type="radio" name="1" value="A">a) Movimento a favor de uma classe de indíviduos que sofrem discriminação racial.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:E:1-1" type="radio" name="1" value="B">b) Ato ou efeito de revolver ou revolucionar. Pode ter vários significados aplicados à várias áreas diferentes. É sinônimo de revolta.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:E:1-1" type="radio" name="1" value="C">c) Movimento contra uma parcela da população que vai contra um determinada forma de ditadura política.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:E:1-1" type="radio" name="1" value="D">d) Mudança social a partir do posicionamento político que busca beneficiar um determinado grupo social.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:1:E:1-1" type="radio" name="1" value="E">e) Uma mudança radical dentro de uma sociedade, que ocorre a nível, econômico, cultural e social, onde é estabelecida uma nova ordem. Porém não é de cunho político.</label>
+			    </div>	
+		</div>
+		<button type="button" id="A1-easy" class="Q:1:E:3-1 btn btn-info btn-lg">Responder</button>
+		<button type="button" id="D1-easy" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tip">Sugestão</button>
+		<button type="button" id="C1-easy" class="btn btn-info btn-lg">Voltar ao conteúdo</button>
+	</div>
+	<!-- Fim da div de uma questão-->
+
+	<div id="tip-Q1-easy" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="D:1:E:1-1 close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Sugestão do exercício</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img src="dica_q1f.jpg">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="D:1:E:1-1 btn btn-default" data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Inicio da div de uma questão-->
+	<div class="question" id="Q2-hard">
+		<h1 class="Q:2:H:1-2">Questão 2</h1>
+
+		<p class="Q:2:H:1-2">Sobre a Revolução Russa de 1917 pode-se afirmar que:</p>
+		<img class="Q:2:H:1-2" src="images/questao_1.png" width="100" height="100">
+		<div class="alternativas">
+			<div class="radio">
+			      <label><input class="Q:2:H:1-2" type="radio" name="2" value="A">a) Sob a liderança bolchevique de Lênin, a Rússia saiu do conflito mundial e assinou um acordo de paz com a França e a Itália em 1918, que ficou conhecido como tratado de Brest-Litovsky.
+			      </label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:H:1-2" type="radio" name="2" value="B">b) Em fevereiro de 1917, um golpe de Estado derrubou o czar Nicolau II e colocou no seu lugar uma monarquia constitucional, liderada pelo militar russo Kerensky, representante dos bolcheviques.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:H:1-2" type="radio" name="2" value="C">c) Os mencheviques lutavam pela saída imediata da Rússia da Primeira Guerra Mundial, porém Kerensky, o líder dos bolcheviques pregava a necessidade do país ganhar a guerra e sair de cabeça erguida.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:H:1-2" type="radio" name="2" value="D">d) Após a saída da Rússia da Primeira Guerra Mundial houve a implantação de um tratado de paz entre a defensoria do regime Czarista (Exército Branco) e os Sovietes (Exército Vermelho), que ficou conhecido como o Tratado de Trotsky.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:H:1-2" type="radio" name="2" value="E">e) Os sovietes ressurgiram liderados por Lênin e Trotsky e derrubaram o governo de Kerensky sob o lema "paz, terra e pão" e "todo poder aos sovietes".</label>
+			    </div>	
+		</div>
+		<button type="button" id="A2-hard" class="Q:2:H:1-2 btn btn-info btn-lg">Responder</button>
+		<button type="button" id="D2-hard" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q2-hard">Sugestão</button>
+		<button type="button" id="C2-hard" class="btn btn-info btn-lg">Voltar ao conteúdo</button>
+	</div>
+	<!-- Fim da div de uma questão-->
+
+	<div id="tip-Q2-hard" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="D:2:H:1-2 close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Sugestão do exercício</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img src="dica_q2d.jpg">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="D:2:H:1-2 btn btn-default" data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Inicio da div de uma questão-->
+	<div class="question" id="Q2-easy">
+		<h1 class="Q:2:E:1-2">Questão 2</h1>
+
+		<p class="Q:2:E:1-2"> Dentre as causas da Revolução russa de 1917 podemos destacar:</p>
+		<img class="Q:2:E:1-2" src="images/questao_1.png" width="100" height="100">
+		<div class="alternativas">
+			<div class="radio">
+			      <label><input class="Q:2:E:1-2" type="radio" name="2" value="A">a) Regime extremamente capitalista, governo centralizado e surgimento da NEP (Nova Política Econômica).</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:E:1-2" type="radio" name="2" value="B">b) Conflitos, exército russo derrotado, aumento da pobreza e fome. </label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:E:1-2" type="radio" name="2" value="C">c) Aumento da pobreza, regime extremamente capitalista e inplantação da Nova Política Econômica.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:E:1-2" type="radio" name="2" value="D">d) Jornada de trabalho extremante excessiva, exercito russo derrotado, conflitos e fome.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:2:E:1-2" type="radio" name="2" value="E">e) Conflitos, exercito russo derrotado, jornadas de trabalhos extremamente excessiva e inplantação da NEP (Nova política Econômica).
+			      </label>
+			    </div>	
+		</div>
+		<button type="button" id="A2-easy" class="Q:2:E:1-2 btn btn-info btn-lg">Responder</button>
+		<button type="button" id="D2-easy" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tip">Sugestão</button>
+		<button type="button" id="C2-easy" class="btn btn-info btn-lg">Voltar ao conteúdo</button>
+	</div>
+	<!-- Fim da div de uma questão-->
+
+	<div id="tip-Q2-easy" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="D:2:E:1-2 close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Sugestão do exercício</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img src="dica_q2f.jpg">
+	        <img src="dica_q2f_1.jpg">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="D:2:E:1-2 btn btn-default" data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+	<!-- Inicio da div de uma questão-->
+	<div class="question" id="Q3-hard">
+		<h1 class="Q:3:H:1-3">Questão 3</h1>
+
+		<p class="Q:3:H:1-3"> Sobre a Revolução Russa é correto afirmar que:</br></br>
+
+			I. No início do século XX, a Rússia era governada por um czar (imperador) que concentrava todos os poderes e que
+			   mantinha uma administração centralizada e burocratizada.</br></br>
+
+		   II. Muitos trabalhadores passaram a organizar manifestações, greves e passeatas, o que resultou no surgimento de
+		  	   partidos de oposição, dentre os quais destacou-se o Partido Operário Social-Democrata Russo (POSDR). </br></br>
+
+		  III. O desenvolvimento industrial russo iniciou-se no final do século 19, principalmente com investimentos do governo
+		   	   russo, principalmente para a exploração de petróleo e produção de aço.</br></br>
+
+		   IV. A revolução de 1905 foi marcada pela repressão das manifestações populares e pelo surgimento dos sovietes, que
+		   	   eram uma Assembleia Constituinte, organizada pelo czar.</br></br>
+
+		    V. Com o início da Primeira Guerra Mundial (1914-1918), a Rússia entrou no conflito ao lado da Tríplice Entente
+		       (Inglaterra, França, Rússia) lutando contra os países que compunham a Tríplice Aliança.</br></br> 
+		</p>
+		<img class="Q:3:H:1-3" src="images/crash.jpg" width="100" height="100">
+		<p class="Q:3:H:1-3">Dentre as afirmações acima, estão corretas:</p>
+		<div class="alternativas">
+				<div class="radio">
+			      <label><input class="Q:3:H:1-3" type="radio" name="3" value="A">a) I e II apenas.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:H:1-3" type="radio" name="3" value="B">b) II, III e IV apenas.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:H:1-3" type="radio" name="3" value="C">c) I, IV e V apenas.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:H:1-3" type="radio" name="3" value="D">d) I, II e V apenas.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:H:1-3" type="radio" name="3" value="E">e) II, III apenas.</label>
+			    </div>			
+		</div>
+		<button type="button" id="A3-hard" class="Q:3:H:1-3 btn btn-info btn-lg">Responder</button>
+		<button type="button" id="D3-hard" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q3-hard">Sugestão</button>
+		<button type="button" id="C3-hard" class="btn btn-info btn-lg">Voltar ao conteúdo</button>
+	</div>
+	<!-- Fim da div de uma questão-->
+
+	<div id="tip-Q3-hard" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="D:3:H:1-3 close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Sugestão do exercício</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img src="dica_q3d.jpg">
+	        <img src="dica_q3d2.jpg">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="D:3:H:1-3 btn btn-default" data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+	<!-- Inicio da div de uma questão-->
+	<div class="question" id="Q3-easy">
+		<h1 class="Q:3:E:1-3">Questão 3</h1>
+		<p class="Q:3:E:1-3">Em relação a Revolução Russa é correto afirmar que:</p>
+		<img class="Q:3:E:1-3" src="images/questao_1.png" width="100" height="100">
+		<div class="alternativas">
+				<div class="radio">
+			      <label><input class="Q:3:E:1-3" type="radio" name="3" value="A">a) Originou-se devido a insatisfação dos trabalhadores industriais, que realizavam manifestações pacíficas afim de reividicarem melhores condições de trabalho, como por exemplo redução da jornada diária.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:E:1-3" type="radio" name="3" value="B">b) Em outubro de 1917, os  mencheviques (que significa minoria) mobilizaram a população e derrubaram o governo de Kerensky sob o lema "paz, terra e pão" e "todo poder aos sovietes".</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:E:1-3" type="radio" name="3" value="C">c) Possuía como lider um czar, que lutava pelo direito de melhores condições de vida e trabalho para a classe trabalhadora.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:E:1-3" type="radio" name="3" value="D">d) O sovietes eram uma espécie de concelho, liderado por  Lênin e Trotski que era contra as reividicações dos trabalhadores insastifeitos com as condições de trabalho da época.</label>
+			    </div>
+
+			    <div class="radio">
+			      <label><input class="Q:3:E:1-3" type="radio" name="3" value="E">e) Foi marcada pelo domingo sangreto, fato que ficou conhecido por conta da morte de centenas de soldados durante a revolução de 1905.</label>
+			    </div>			
+		</div>
+		<button type="button" id="A3-easy" class="Q:3:E:1-3 btn btn-info btn-lg">Responder</button>
+		<button type="button" id="D3-easy" class="btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q3-easy">Sugestão</button>
+		<button type="button" id="C3-easy" class="btn btn-info btn-lg">Voltar ao conteúdo</button>
+	</div>
+	<!-- Fim da div de uma questão-->
+
+	<div id="tip-Q3-easy" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="D:3:E:1-3 close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Sugestão do exercício</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img src="dica_q3f.jpg">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="D:3:E:1-3 btn btn-default" data-dismiss="modal">Fechar</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+
+</body>
+<style type="text/css">
+	.question{
+		visibility: hidden;
+	}
+
+	.tip {
+		visibility: hidden;
+	}
+
+	#outset{
+		visibility: hidden;
+	}
+
+	#menuListaQuestoes {
+		visibility: hidden;
+	}
+
+	#menu{
+		width: 200px;
+		float: left;
+	}
+
+	#containerQuestion{
+		width: 600px;
+		float: left;
+	}
+
+</style>
+<script type="text/javascript">
+	var containerQuestion = document.getElementById("containerQuestion");
+	var time = setInterval(verificar(),1000);
+
+	containerQuestion.innerHTML = document.getElementById('Q1-hard').innerHTML;
+
+	function iniciar(idMenu,idquestion){
+		var menu = document.getElementById('menu');
+		menu.innerHTML = document.getElementById(idMenu).innerHTML;
+		
+		containerQuestion.innerHTML = document.getElementById(idquestion).innerHTML;
+	}
+
+	function verificar() {
+		if (multioption.status == true) {
+			carregar(multioption.div);
+		}
+	}
+
+	function carregar(id) {
+		//question a ser carregada
+		var question = document.getElementById(id);
+
+		//setando container da question para a questão clicada na lista
+		containerQuestion.innerHTML = question.innerHTML;
+	}
+</script>
+</html>
