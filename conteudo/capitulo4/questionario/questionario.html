@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../../../DataCollector.js"></script>
+
+	<title>Questionário Segunda Guerra</title>
+</head>
+<body onload="carregar('Q1-hard')">
+
+<div style="display: inline-block;">
+	<!-- menu lateral que deve listar as questões -->
+	<div class="container" id="menu">
+		<h3>Exercício</h3>
+		<div>
+			<a href="#" onclick="carregar('Q1-hard')" class="Q:1:H:4-4 list-group-item">Questão 1</a>
+			<a href="#" onclick="carregar('Q2-hard')" class="Q:2:H:4-5 list-group-item">Questão 2</a>
+			<a href="#" onclick="carregar('Q3-hard')" class="Q:3:H:4-2 list-group-item">Questão 3</a>
+			<a href="#" onclick="carregar('Q4-hard')" class="Q:4:H:4-4 list-group-item">Questão 4</a>
+			<a href="#" onclick="carregar('Q5-hard')" class="Q:5:H:4-2 list-group-item">Questão 5</a>
+		</div>
+	</div>
+
+	<div class="container" id="containerQuestion">
+
+	</div>
+
+	<div class="container" id="menuTroca">
+		<h3>Opções</h3>
+		<button type="button" id="btnTroca" class="troca btn btn-info btn-lg" onclick="carregar(multioption.id)">Trocar questão</button>
+	</div>
+</div>
+
+<!-- A partir daqui fica escondido -->
+<!-- Inicio da div de uma questão-->
+<div class="question escondido" id="Q1-hard">
+	<h1 class="Q:1:H:4-4">Questão 1</h1>
+	<p class="Q:1:H:4-4">A II Guerra Mundial foi o maior conflito armado da história da humanidade, caracterizada pelo desenvolvimento da indústria bélica, ao ponto de se produzir a bomba atômica e toda a mortandade decorrente. Sobre o conflito, é incorreto afirmar que:
+	</p>
+	<img class="Q:1:H:4-4" src="images/questao_1.png" width="100" height="100">
+	<div class="alternativas">
+		<div class="radio">
+			<label><input class="Q:1:H:4-4" type="radio" name="1" value="A">a) Os Estados Unidos entraram na guerra após o ataque japonês a Pearl Harbor.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:1:H:4-4" type="radio" name="1" value="B">b) O Eixo era formado pela Alemanha, Itália e Japão.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:1:H:4-4" type="radio" name="1" value="C">c) A guerra iniciou-se após a invasão da Alemanha no território soviético.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:1:H:4-4" type="radio" name="1" value="D">d)  O evento final da II Guerra Mundial foram as bombas atômicas de Hiroshima e Nagasaki.
+			</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:1:H:4-4" type="radio" name="1" value="E">e) Em 1940, os alemães conseguiram ocupar Paris.</label>
+		</div>
+	</div>
+	<button type="button" id="A1-hard" class="Q:1:H:4-4 btn btn-info btn-lg">Responder</button>
+	<button type="button" id="D1-hard" class="D:1:H:4-4 btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q1-hard">Sugestão</button>
+	<button type="button" id="C1-hard" class="C:1:H:4-4 btn btn-info btn-lg" data-toggle="modal" data-target="#my-content" onclick="carregarHTML('C:1:H:4-4')">Voltar ao conteúdo</button>
+</div>
+<!-- Fim da div de uma questão-->
+
+<div id="tip-Q1-hard" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="D:1:H:4-4 close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Uma dica:</h4>
+			</div>
+			<div class="modal-body">
+				<p>Inicialmente, a União Soviética lutava ao lado da Alemanha</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="D:1:H:4-4 btn btn-default " data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Inicio da div de uma questão-->
+<div class="question escondido" id="Q1-easy">
+	<h1 class="Q:1:E:4-1">Questão 1</h1>
+
+	<p class="Q:1:E:4-1">Quais das alternativas abaixo apresenta o nome de dois importantes líderes fascistas e os países que governaram?
+	</p>
+	<img class="Q:1:E:4-1" src="images/questao_1.png" width="100" height="100">
+	<div class="alternativas">
+		<div class="radio">
+			<label><input class="Q:1:E:4-1" type="radio" name="1" value="A">a) Winston Churchill nos EUA e Adolf Hitler na França</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:1:E:4-1" type="radio" name="1" value="B">b) Adolf Hitler na Alemanha e Benito Mussolini na Itália.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:1:E:4-1" type="radio" name="1" value="C">c) Winston Churchill na Inglaterra e Roosevelt nos Estados Unidos.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:1:E:4-1" type="radio" name="1" value="D">d) Montgomery na Inglaterra e Eisenhower nos Estados Unidos.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:1:E:4-1" type="radio" name="1" value="E">e) Stalin na União Soviética e Gandhi na Índia.</label>
+		</div>
+	</div>
+	<button type="button" id="A1-easy" class="Q:1:E:4-1 btn btn-info btn-lg">Responder</button>
+	<button type="button" id="D1-easy" class="D:1:E:4-1 btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q1-easy">Sugestão</button>
+	<button type="button" id="C1-easy" class="C:1:E:4-1 btn btn-info btn-lg" data-toggle="modal" data-target="#my-content" onclick="carregarHTML('C:1:E:4-1')">Voltar ao conteúdo</button>
+</div>
+<!-- Fim da div de uma questão-->
+
+<div id="tip-Q1-easy" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="D:1:E:4-1 close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Você sabia que:</h4>
+			</div>
+			<div class="modal-body">
+				<p>O líder da Alemanha Nazista de 1934 a 1945, iniciou a Segunda Guerra Mundial e instaurou políticas fascistas que resultaram na morte de milhares de pessoas</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="D:1:E:4-1 btn btn-default" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Inicio da div de uma questão-->
+<div class="question escondido" id="Q2-hard">
+	<h1 class="Q:2:H:4-5">Questão 2</h1>
+	<p class="Q:2:H:4-5"> Marque a opção que apresenta a principal consequência da Segunda Guerra Mundial. </p>
+	<img class="Q:2:H:4-5" src="images/questao_1.png" width="100" height="100">
+	<div class="alternativas">
+		<div class="radio">
+			<label><input class="Q:2:H:4-5" type="radio" name="2" value="A">a) O massacre contra os chineses, que ficou conhecido como holocausto. Eles eram mortos friamente, pois a ideologia alemã os privava do direito à vida.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:2:H:4-5" type="radio" name="2" value="B">b) O quase extermíneo de todo um povo, conhecido como judeu, pois foram as principais vítimas dos ataques dos nazistas no período da Segunda Guerra Mundial.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:2:H:4-5" type="radio" name="2" value="C">c)  A invasão da Polônia pela Alemanha, pois este foi o evento que deu início a Segunda Guerra Mundial, desencadeando uma série de conflitos entre os países do eixo.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:2:H:4-5" type="radio" name="2" value="D">d) A queda de Adolph Hittler, líder dos nazistas, pois com isso os judeus foram libertos dos campos de concentração. </label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:2:H:4-5" type="radio" name="2" value="E">e) A morte de milhares de soldados durante os conflitos, que eram obrigados por lei a entrarem em batalha para defender seu país e também de cidadãos inocentes mortos a sangue frio por conta de uma ideologia racista e preconceituosa, defendida pelos alemães..</label>
+		</div>
+	</div>
+	<button type="button" id="A2-hard" class="Q:2:H:4-5 btn btn-info btn-lg">Responder</button>
+	<button type="button" id="D2-hard" class="D:2:H:4-5 btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q2-hard">Sugestão</button>
+	<button type="button" id="C2-hard" class="C:2:H:4-5 btn btn-info btn-lg" data-toggle="modal" data-target="#my-content" onclick="carregarHTML('C:2:H:4-5')">Voltar ao conteúdo</button>
+</div>
+<!-- Fim da div de uma questão-->
+
+<div id="tip-Q2-hard" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="D:2:H:4-5 close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Uma dica:</h4>
+			</div>
+			<div class="modal-body">
+				<img src="images/dica-Q2-hard.png">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="D:2:H:4-5 btn btn-default " data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Inicio da div de uma questão-->
+<div class="question escondido" id="Q2-easy">
+	<h1 class="Q:2:E:4-5">Questão 2</h1>
+
+	<p class="Q:2:E:4-5"></p>
+	<img class="Q:2:E:4-5" src="images/questao_1.png" width="100" height="100">
+	<div class="alternativas">
+		<div class="radio">
+			<label><input class="Q:2:E:4-5" type="radio" name="2" value="A">a) Os povos de origem polonesa</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:2:E:4-5" type="radio" name="2" value="B">b) O povo judeu.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:2:E:4-5" type="radio" name="2" value="C">c) A federação Russa (URSS).</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:2:E:4-5" type="radio" name="2" value="D">d) Negros, pois a Alemanha defendia que a raça superior era a ariana (brancos).</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:2:E:4-5" type="radio" name="2" value="E">e) Nenhuma das anteriores</label>
+		</div>
+	</div>
+	<button type="button" id="A2-easy" class="Q:2:E:4-5 btn btn-info btn-lg">Responder</button>
+	<button type="button" id="D2-easy" class="D:2:E:4-5 btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q2-easy">Sugestão</button>
+	<button type="button" id="C2-easy" class="C:2:E:4-5 btn btn-info btn-lg" data-toggle="modal" data-target="#my-content" onclick="carregarHTML('C:2:E:4-5')">Voltar ao conteúdo</button>
+</div>
+<!-- Fim da div de uma questão-->
+
+<div id="tip-Q2-easy" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="D:2:E:4-5 close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Você sabia que:</h4>
+			</div>
+			<div class="modal-body">
+				<img src="images/dica_q2f.jpg" width="500" >
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="D:2:E:4-5 btn btn-default" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Inicio da div de uma questão-->
+<div class="question escondido" id="Q3-hard">
+	<h1 class="Q:3:H:4-2">Questão 3</h1>
+	<p class="Q:3:H:4-2"> Sobre a invasão alemã à União Soviética, assinale a alternativa incorreta:</p>
+	<img class="Q:3:H:4-2" src="images/batalha-stalingrado.jpg" width="400" height="250">
+	<div class="alternativas">
+		<div class="radio">
+			<label><input class="Q:3:H:4-2" type="radio" name="3" value="A">a) Sob o nome de Operação "Barbarossa", a Alemanha nazista invadiu a União Soviética em 22 de junho de 1941, naquela que foi considerada a maior operação militar germânica da Segunda Guerra Mundial.
+			</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:3:H:4-2" type="radio" name="3" value="B">b) Hitler, ao invadir a União Soviética, de Stalin, pretendia a eliminação permanente da ameaça comunista à Alemanha, e a conquista de terras consideradas importantes aos objetivos nazistas.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:3:H:4-2" type="radio" name="3" value="C">c) Adolf Hitler sempre havia considerado o pacto Molotov-Ribbentrop de não agressão germano-soviético, assinado em 23 de agosto de 1939, uma manobra tática temporária.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:3:H:4-2" type="radio" name="3" value="D">d) A invasão culminou na Batalha de Stalingrado, que é considerada a maior e mais sangrenta batalha de toda a História. O confronto marcou a virada da guerra no front oriental e deixou enormes perdas civis para os dois lados.
+			</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:3:H:4-2" type="radio" name="3" value="E">e)  A Alemanha não projetou o carregamento de equipamentos, suprimentos de comida e remédios suficientes para suas tropas durante os combates no rigoroso inverno russo.
+			</label>
+		</div>
+	</div>
+	<button type="button" id="A3-hard" class="Q:3:H:4-2 btn btn-info btn-lg">Responder</button>
+	<button type="button" id="D3-hard" class="D:3:H:4-2 btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q3-hard">Sugestão</button>
+	<button type="button" id="C3-hard" class="C:2:H:4-2 btn btn-info btn-lg" data-toggle="modal" data-target="#my-content" onclick="carregarHTML('C:2:H:4-2')">Voltar ao conteúdo</button>
+</div>
+<!-- Fim da div de uma questão-->
+
+<div id="tip-Q3-hard" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="D:3:H:4-2 close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Uma dica:</h4>
+			</div>
+			<div class="modal-body">
+				<img src="images/dica-Q2-hard.png">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="D:3:H:4-2 btn btn-default " data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="question escondido" id="Q3-easy">
+	<h1 class="Q:3:E:4-2">Questão 3</h1>
+
+	<p class="Q:3:E:4-2">Por que os japoneses atacaram os americanos?</p>
+	<img class="Q:3:E:4-2" src="images/questao_1.png" width="100" height="100">
+	<div class="alternativas">
+		<div class="radio">
+			<label><input class="Q:3:E:4-2" type="radio" name="3" value="A">a) Declaração de guerra à Alemanha</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:3:E:4-2" type="radio" name="3" value="B">b) Criação da bomba atômica</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:3:E:4-2" type="radio" name="3" value="C">c) Eleição do presidente Roosevelt</label>
+		</div>
+
+		<!--correta -->
+		<div class="radio">
+			<label><input class="Q:3:E:4-2" type="radio" name="3" value="D">d) Quebra das relações comerciais dos Eua com o Japão, principalmente parar de exportar petróleo</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:3:E:4-2" type="radio" name="3" value="E">e) Ataque às ilhas japonesas</label>
+		</div>
+	</div>
+	<button type="button" id="A3-easy" class="Q:3:E:4-2 btn btn-info btn-lg">Responder</button>
+	<button type="button" id="D3-easy" class="D:3:E:4-2 btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q3-easy">Sugestão</button>
+	<button type="button" id="C3-easy" class="C:3:E:4-2 btn btn-info btn-lg" data-toggle="modal" data-target="#my-content" onclick="carregarHTML('C:3:E:4-2')">Voltar ao conteúdo</button>
+</div>
+<!-- Fim da div de uma questão-->
+
+<div id="tip-Q3-easy" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="D:3:E:4-2 close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Os avanços do eixo</h4>
+			</div>
+			<div class="modal-body">
+				<p>"Com a França neutralizada, a Alemanha
+					começou uma campanha de supremacia aérea
+					sobre o Reino Unido (a Batalha da
+					Grã-Bretanha) para se preparar para uma
+					invasão. A campanha fracassou e os planos de
+					invasão foram cancelados até setembro.
+					Durante todo esse período, o neutro Estados
+					Unidos tomou medidas para ajudar a China e
+					os Aliados Ocidentais. Em 1940, após a captura
+					alemã de Paris, o tamanho da Marinha
+					Americana aumentou significativamente e,
+					depois da incursão japonesa na Indochina, o
+					país embargou ferro, aço e peças mecânicas
+					contra o Japão."</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="D:3:E:4-2 btn btn-default" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Inicio da div de uma questão-->
+<div class="question escondido" id="Q4-hard">
+	<h1 class="Q:4:H:4-4">Questão 4</h1>
+	<p class="Q:4:H:4-4">Qual era o cenário da guerra no Pacífico antes do lançamento das bombas nucleares em Hiroshima e Nagasaki?</p>
+	<img class="Q:4:H:4-4" src="images/questao_1.png" width="100" height="100">
+	<div class="alternativas">
+		<div class="radio">
+			<label><input class="Q:4:H:4-4" type="radio" name="4" value="A">a) O Japão estava alcançando o poderio bélico nuclear, e preparava-se para atacar os EUA, devido aos avançados estágios de pesquisas nessa área.
+			</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:4:H:4-4" type="radio" name="4" value="B">b) O Japão estava convocando milhões de civis para um novo conflito. Isso exigiria dos EUA um número de soldados maior do que no Dia D para realizar a "Operação Downfall" que pretendia pôr fim à guerra no Pacífico.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:4:H:4-4" type="radio" name="4" value="C">c) Diante da rendição alemã, o Japão estava aliando-se à União Soviética, e juntos, pretendiam atacar os EUA, pelo controle mundial.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:4:H:4-4" type="radio" name="4" value="D">d) A população inteira não estava interessada na guerra, pois sabiam que ela já estava perdida, e faziam pressão ao imperador para assinar a rendição.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:4:H:4-4" type="radio" name="4" value="E">e) O Japão, mediante a derrota italiana e alemã, propôs consecutivos pactos de não-agressão aos EUA, pois sabia sua inferioridade militar e estava disposto à proteger sua população civil.</label>
+		</div>
+	</div>
+	<button type="button" id="A4-hard" class="Q:4:H:4-4 btn btn-info btn-lg">Responder</button>
+	<button type="button" id="D4-hard" class="D:4:H:4-4 btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q4-hard">Sugestão</button>
+	<button type="button" id="C4-hard" class="C:4:H:4-4 btn btn-info btn-lg" data-toggle="modal" data-target="#my-content" onclick="carregarHTML('C:4:H:4-4')">Voltar ao conteúdo</button>
+</div>
+<!-- Fim da div de uma questão-->
+
+<div id="tip-Q4-hard" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="D:4:H:4-4 close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Uma dica:</h4>
+			</div>
+			<div class="modal-body">
+				<p> Forças britânicas,
+					estadunidenses e chinesas
+					derrotaram os japoneses no
+					norte da Birmânia em março e
+					os britânicos chegaram a
+					Yangon em 3 de maio. Forças
+					estadunidenses também
+					chegam ao Japão, tomando Iwo
+					Jima em março e Okinawa até o
+					final de junho. Bombardeiros
+					estadunidenses destroem as
+					cidades japonesas e
+					submarinos bloqueiam as
+					importações do país. A explosão
+					nuclear em
+					Nagasaki ocorreu em 9 de
+					agosto de 1945.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="D:4:H:4-4 btn btn-default " data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="question escondido" id="Q4-easy">
+	<h1 class="Q:4:E:4-4">Questão 4</h1>
+
+	<p class="Q:4:E:4-4">Onde atuou a Força Expedicionária Brasileira?</p>
+	<img class="Q:4:E:4-4" src="images/questao_1.png" width="100" height="100">
+	<div class="alternativas">
+		<div class="radio">
+			<label><input class="Q:4:E:4-4" type="radio" name="4" value="A">a) Ajudou o Exército Vermelho na invasão à Berlim.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:4:E:4-4" type="radio" name="4" value="B">b) Desembarque na Normandia.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:4:E:4-4" type="radio" name="4" value="C">c) Campanha da Itália.</label>
+		</div>
+
+		<!--correta -->
+		<div class="radio">
+			<label><input class="Q:4:E:4-4" type="radio" name="4" value="D">d) Não teve participação efetiva durante o conflito.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:4:E:4-4" type="radio" name="4" value="E">e) Devido à proximidade com os Aliados, atuou em campanhas na Espanha para combater o franquismo.</label>
+		</div>
+	</div>
+	<button type="button" id="A4-easy" class="Q:4:E:4-4 btn btn-info btn-lg">Responder</button>
+	<button type="button" id="D4-easy" class="D:4:E:4-4 btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q4-easy">Sugestão</button>
+	<button type="button" id="C4-easy" class="C:4:E:4-4 btn btn-info btn-lg" data-toggle="modal" data-target="#my-content" onclick="carregarHTML('C:4:E:4-4')">Voltar ao conteúdo</button>
+</div>
+<!-- Fim da div de uma questão-->
+
+<div id="tip-Q4-easy" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="D:3:E:4-4 close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Dica</h4>
+			</div>
+			<div class="modal-body">
+				<p>A Força Expedicionária Brasileira, conhecida pela sigla FEB, foi a força militar brasileira de 25.334 homens que foi responsável pela participação brasileira ao lado dos Aliados, durante a Segunda Guerra Mundial.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="D:3:E:4-4 btn btn-default" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="question escondido" id="Q5-hard">
+	<h1 class="Q:4:H:4-4">Questão 5</h1>
+	<p class="Q:4:H:4-4">Que motivo levou o Brasil à entrada na guerra, ao lado dos aliados, em 1943?</p>
+	<img class="Q:4:H:4-4" src="images/questao_1.png" width="100" height="100">
+	<div class="alternativas">
+		<div class="radio">
+			<label><input class="Q:5:H:4-4" type="radio" name="5" value="A">a) A aproximação do Brasil com a União Soviética, que foi malvista aos olhos do governo alemão, que começou a torpedar navios brasileiros, levando o Brasil, à declaração de estado de guerra.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:5:H:4-4" type="radio" name="5" value="B">b) A aproximação do Brasil com a Inglaterra, que foi malvista aos olhos do governo alemão, que começou a torpedar navios brasileiros, levando o Brasil, à declaração de estado de guerra. </label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:5:H:4-4" type="radio" name="5" value="C">c) A aproximação do Brasil com os Estados Unidos, que foi malvista aos olhos do governo alemão, que começou a torpedar navios brasileiros, levando o Brasil, à declaração de estado de guerra.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:5:H:4-4" type="radio" name="5" value="D">d) Adolf Hitler ameaçou bombardear o território brasileiro, caso o Brasil não oferecesse seus recursos.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:5:H:4-4" type="radio" name="5" value="E">e) Nenhuma das anteriores</label>
+		</div>
+	</div>
+	<button type="button" id="A5-hard" class="Q:5:H:4-4 btn btn-info btn-lg">Responder</button>
+	<button type="button" id="D5-hard" class="D:5:H:4-4 btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q5-hard">Sugestão</button>
+	<button type="button" id="C5-hard" class="C:5:H:4-4 btn btn-info btn-lg" data-toggle="modal" data-target="#my-content" onclick="carregarHTML('C:5:H:4-4')">Voltar ao conteúdo</button>
+</div>
+<!-- Fim da div de uma questão-->
+
+<div id="tip-Q5-hard" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="D:5:H:4-4 close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Uma dica:</h4>
+			</div>
+			<div class="modal-body">
+				<p>Em 15 de agosto de 1942, o Cargueiro Baependy é afundado nas costas do Brasil pelo submarino U-507, com grande perda de vidas.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="D:5:H:4-4 btn btn-default " data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="question escondido" id="Q5-easy">
+	<h1 class="Q:5:E:4-2">Questão 2</h1>
+
+	<p class="Q:5:E:4-2"> (Fac. Med. Ribeirão Preto-SP) A Segunda Grande Guerra (1939-1945), a partir de 7 de dezembro de 1941, adquire um caráter mundial quando os:</p>
+	<img class="Q:5:E:4-2" src="images/questao_1.png" width="100" height="100">
+	<div class="alternativas">
+		<div class="radio">
+			<label><input class="Q:5:E:4-2" type="radio" name="5" value="A">a) russos tomam a iniciativa de anexar o território dos Estados bálticos.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:5:E:4-2" type="radio" name="5" value="B">b) alemães invadem a região mediterrânica da Ásia.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:5:E:4-2" type="radio" name="5" value="C">c) japoneses atacam a base americana de Pearl Habor.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:5:E:4-2" type="radio" name="5" value="D">d) franceses, por determinação de Petain, ocupam o sudeste da Ásia.</label>
+		</div>
+
+		<div class="radio">
+			<label><input class="Q:5:E:4-2" type="radio" name="5" value="E">e) chineses cedem a maior parte do seu território às tropas do Eixo.</label>
+		</div>
+	</div>
+	<button type="button" id="A5-easy" class="Q:5:E:4-2 btn btn-info btn-lg">Responder</button>
+	<button type="button" id="D5-easy" class="D:5:E:4-2 btn btn-info btn-lg" data-toggle="modal" data-target="#tip-Q5-easy">Sugestão</button>
+	<button type="button" id="C5-easy" class="C:5:E:4-2 btn btn-info btn-lg" data-toggle="modal" data-target="#my-content" onclick="carregarHTML('C:5:E:4-2')">Voltar ao conteúdo</button>
+</div>
+<!-- Fim da div de uma questão-->
+
+<div id="tip-Q5-easy" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="D:5:E:4-2 close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Você sabia que:</h4>
+			</div>
+			<div class="modal-body">
+				<p></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="D:5:E:4-2 btn btn-default" data-dismiss="modal">Fechar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-------------------------------------------------->
+<!-- modal que fica escondido para trocar questão -->
+<div class="container">
+</div>
+
+<!-- para voltar ao conteúdo -->
+<div id="my-content" class="modal fade" role="dialog">
+	<iframe id="content-frame" src=""></iframe>
+</div>
+
+</body>
+
+<style type="text/css">
+	.question{
+		visibility: hidden;
+	}
+
+	.tip {
+		visibility: hidden;
+	}
+
+	.btn-default {
+		visibility: hidden;
+	}
+
+	.try-another {
+		visibility: hidden;
+	}
+
+	.escondido
+	{
+		visibility: hidden;
+	}
+
+	#menu{
+		width: 200px;
+		float: left;
+	}
+
+	#containerQuestion{
+		width: 600px;
+		float: left;
+	}
+
+	#menuTroca {
+		width: 200px;
+		float: left;
+		visibility: hidden;
+	}
+
+	iframe {
+		width: 80%;
+		height: 100%;
+		position: relative;
+		left: 10%;
+		top: 10%;
+	}
+</style>
+
+<script type="text/javascript">
+	var containerQuestion = document.getElementById("containerQuestion");
+	var containerTroca = document.getElementById("menuTroca");
+	var time = setInterval(verificar,1000);
+
+	containerQuestion.innerHTML = document.getElementById('Q1-hard').innerHTML;
+
+	function iniciar(idMenu,idquestion){
+		var menu = document.getElementById('menu');
+		menu.innerHTML = document.getElementById(idMenu).innerHTML;
+		containerQuestion.innerHTML = document.getElementById(idquestion).innerHTML;
+	}
+
+	function verificar() {
+		if (multioption.status == true && multioption.type == "question") {
+			document.getElementById('menuTroca').style.visibility = "visible";
+
+			//document.getElementById('menuTroca').addEventListener('click',carregar(''));
+		}
+		else if (multioption.status == true && (multioption.type == "tip" || multioption.type == "content")) {
+			document.getElementById(multioption.id).style.visibility = 'visible';
+			multioption.status = false;
+		}
+	}
+
+	function carregar(id) {
+		//question a ser carregada
+		var question = document.getElementById(id);
+
+		//setando container da question para a questão clicada na lista
+		containerQuestion.innerHTML = question.innerHTML;
+		document.getElementById('menuTroca').style.visibility = 'hidden';
+		multioption.status = false;
+	}
+
+	function carregarHTML(id){
+		var vet = id.split(':');
+		var index = vet[3].split('-');
+		var idcapt = index[0];
+		var iditem = index[1];
+		var link;
+		var info = $.getJSON("../../../info.json", function(data) {
+			console.log(data);
+			if(data.chapter == idcapt){
+				for (var j = 0; j < Object.keys(data['itens']).length - 1; j++) {
+					if(data['itens'][j]['id-item'] == vet[3]) {
+						link = data['itens'][j]['href'];
+						console.log(data['itens'][j]['href'],link);
+						document.getElementById('content-frame').src = '../' + link;
+						break;
+					}
+				}
+			}
+		});
+
+	}
+</script>
+
+
+</html>
