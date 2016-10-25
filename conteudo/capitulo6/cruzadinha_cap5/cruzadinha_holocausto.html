@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+      <head>
+      		<meta charset="UTF-8">
+       		<meta name="author" content="Created with Hot Potatoes by Half-Baked Software, registered to Jose Carvalho.">
+       		<meta name="keywords" content="Hot Potatoes, Half-Baked Software, Windows, University of Victoria">
+			<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+			<meta name="DC:Creator" content="Jose Carvalho" />
+			<meta name="DC:Title" content="Atividade de Fixação" />
+			<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+
+	<title>Atividade de fixação</title>
+
+
+<!-- Made with executable version 5.5 Release 0 Build 12 -->
+
+       <style type="text/css">
+
+/* This is the CSS stylesheet used in the exercise. */
+/* Elements in square brackets are replaced by data based on configuration settings when the exercise is built. */
+
+
+body{
+	font-family: Geneva,Arial;
+	background-image: url(background.jpg);
+	background-color: #ffffff;
+	color: #000000;
+ 
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: small;
+}
+
+p{
+	text-align: left;
+	margin: 0px;
+	font-size: small;
+}
+
+div,span,td{
+	font-size: small;
+	color: #000000;
+}
+
+#conteiner{
+
+	width: 800px;
+	margin: 0px auto;
+	padding: 15px;
+}
+
+.RTLText{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", Geneva,Arial; 
+}
+
+.CentredRTLText{
+	text-align: center;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Simplified Arabic", "Traditional Arabic", "Times New Roman", Geneva,Arial; 
+}
+
+button p.RTLText{
+	text-align: center;
+}
+
+.RTLGapBox{
+	text-align: right;
+	font-size: 150%;
+	direction: rtl;
+	font-family: "Times New Roman", Geneva,Arial;
+}
+
+.Guess{
+	font-weight: bold;
+}
+
+.CorrectAnswer{
+	font-weight: bold;
+}
+
+div.Titles{
+	padding: 10px;
+	text-align: center;
+	color: #006699;
+}
+
+button{
+	display: inline;
+}
+
+.ExerciseTitle{
+	font-size: large;
+	color: #006699;
+}
+
+.ExerciseSubtitle{
+	color: #006699;
+}
+
+div#Timer{
+	padding: 6px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #006699;
+}
+
+span#TimerText{
+	padding: 6px;
+	border-width: 1px;
+	border-style: solid;
+	font-weight: bold;
+	display: none;
+	color: #006699;
+}
+
+span.Instructions{
+
+}
+
+div.ExerciseText{
+
+}
+
+.FeedbackText{
+	color: #006699;
+}
+
+span.LeftItem{
+	font-size: small;
+	color: #000000;
+}
+
+span.RightItem{
+	font-weight: bold;
+	font-size: small;
+	color: #000000;
+}
+
+span.CorrectMark{
+
+}
+
+div.Feedback {
+	background-color: #ffffff;
+	left: 33%;
+	width: 34%;
+	top: 33%;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	text-align: center;
+	color: #006699;
+	position: absolute;
+	display: none;
+	font-size: small;
+}
+
+
+
+
+div.ExerciseDiv{
+	color: #000000;
+}
+
+/* JMatch flashcard styles */
+table.FlashcardTable{
+	background-color: transparent;
+	color: #000000;
+	border-color: #000000;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	width: 90%;
+	position: relative;
+	align: center;
+	padding: 0px;
+}
+
+table.FlashcardTable tr{
+	border-style: none;
+	margin: 0px;
+	padding: 0px;
+	background-color: #ffffff;
+}
+
+table.FlashcardTable td.Showing{
+	font-size: large;
+	text-align: center;
+	width: 50%;
+	display: table-cell;
+	padding: 2em;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	color: #000000;
+	background-color: #ffffff;
+}
+
+table.FlashcardTable td.Hidden{
+	display: none;
+}
+
+/* JMix styles */
+div#SegmentDiv{
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+a.ExSegment{
+	font-size: medium;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+span.RemainingWordList{
+	font-style: italic;
+}
+
+div.DropLine {
+	position: absolute;
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #006699;
+	width: 80%;
+}
+
+/* JCloze styles */
+
+input{
+	font-family: Geneva,Arial;
+	font-size: larger;
+}
+
+.ClozeWordList{
+	text-align: center;
+	font-weight: bold;
+}
+
+div.ClozeBody{
+	text-align: left;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	line-height: 2.0
+}
+
+span.GapSpan{
+	font-weight: bold;
+}
+
+/* JCross styles */
+
+table.CrosswordGrid{
+	margin: auto auto 1em auto;
+	border-collapse: collapse;
+	padding: 0px;
+}
+
+table.CrosswordGrid td{
+	width: 1.5em;
+	height: 1.5em;
+	text-align: center;
+	vertical-align: middle;
+	font-size: large;
+	padding: 0px;
+	margin: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+}
+
+table.CrosswordGrid td.BlankCell{
+	background-color: #000000;
+	color: #000000;
+}
+
+table.CrosswordGrid td.LetterOnlyCell{
+	text-align: center;
+	vertical-align: middle;
+	background-color: #ffffff;
+	color: #000000;
+	font-weight: bold;
+}
+
+table.CrosswordGrid td.NumLetterCell{
+	text-align: left;
+	vertical-align: top;
+	background-color: #ffffff;
+	color: #000000;
+	padding: 1px;
+	font-weight: bold;
+}
+
+.NumLetterCellText{
+	cursor: pointer;
+}
+
+.GridNum{
+	vertical-align: super;
+	font-size: x-small;
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+table#Clues{
+	margin: auto;
+	vertical-align: top;
+}
+
+table#Clues td{
+	vertical-align: top;
+}
+
+table.ClueList{
+  margin: auto;
+}
+
+td.ClueNum{
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+td.Clue{
+	text-align: left;
+}
+
+div#ClueEntry{
+	text-align: left;
+	margin-bottom: 1em;
+}
+
+/* Keypad styles */
+
+div.Keypad{
+	text-align: center;
+}
+
+div.Keypad button{
+	font-family: Geneva,Arial;
+	font-size: 120%;
+	background-color: #ffffff;
+	color: #000000;
+	width: 2em;
+}
+
+/* JQuiz styles */
+
+div.QuestionNavigation{
+	text-align: center;
+}
+
+.QNum{
+	margin: 0em 1em 0.5em 1em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+textarea{
+	font-family: Geneva,Arial;
+	font-size: larger;
+}
+
+.QuestionText{
+
+}
+
+.Answer{
+	font-size: 120%;
+	letter-spacing: 0.1em;
+}
+
+.Highlight{
+	color: #000000;
+	background-color: #ffff00;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+ol.QuizQuestions{
+	text-align: left;
+	list-style-type: none;
+}
+
+li.QuizQuestion{
+	padding: 1em;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+}
+
+ol.MCAnswers{
+	text-align: left;
+	list-style-type: upper-alpha;
+	padding: 1em;
+}
+
+ol.MCAnswers li{
+	margin-bottom: 1em;
+}
+
+ol.MSelAnswers{
+	text-align: left;
+	list-style-type: lower-alpha;
+	padding: 1em;
+}
+
+div.ShortAnswer{
+	padding: 1em;
+}
+
+div.StdDiv{
+	background-color: #ffffff;
+	text-align: center;
+	font-size: small;
+	color: #000000;
+	padding: 8px;
+	border-style: solid;
+	border-width: 0px 0px 0px 0px;
+	border-color: #000000;
+	margin: 1px;
+}
+
+.FuncButton {
+	text-align: center;
+	border-style: solid;
+
+	border-left-color: #ffffff;
+	border-top-color: #ffffff;
+	border-right-color: #ffffff;
+	border-bottom-color: #ffffff;
+	color: #ffffff;
+	background-color: #006600;
+
+	border-width: 2px;
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+}
+
+.FuncButtonUp {
+	color: #ffffff;
+	text-align: center;
+	border-style: solid;
+
+	border-left-color: #ffffff;
+	border-top-color: #ffffff;
+	border-right-color: #ffffff;
+	border-bottom-color: #ffffff;
+
+	background-color: #006600;
+	color: #ffffff;
+	border-width: 2px;
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+}
+
+.FuncButtonDown {
+	color: #ffffff;
+	text-align: center;
+	border-style: solid;
+
+	border-left-color: #ffffff;
+	border-top-color: #ffffff;
+	border-right-color: #ffffff;
+	border-bottom-color: #ffffff;
+	background-color: #006600;
+	color: #ffffff;
+
+	border-width: 2px;
+	padding: 3px 6px 3px 6px;
+	cursor: pointer;
+}
+
+/*BeginNavBarStyle*/
+
+div.NavButtonBar{
+	background-color: #006600;
+	text-align: center;
+	margin: 2px 0px 2px 0px;
+	clear: both;
+	font-size: small;
+}
+
+.NavButton {
+	border-style: solid;
+	
+	border-left-color: #ffffff;
+	border-top-color: #ffffff;
+	border-right-color: #ffffff;
+	border-bottom-color: #ffffff;
+	background-color: #ffffff;
+	color: #006600;
+
+	border-width: 2px;
+	cursor: pointer;	
+}
+
+.NavButtonUp {
+	border-style: solid;
+
+	border-left-color: #ffffff;
+	border-top-color: #ffffff;
+	border-right-color: #ffffff;
+	border-bottom-color: #ffffff;
+	color: #ffffff;
+	background-color: #006600;
+
+	border-width: 2px;
+	cursor: pointer;	
+}
+
+.NavButtonDown {
+	border-style: solid;
+
+	border-left-color: #ffffff;
+	border-top-color: #ffffff;
+	border-right-color: #ffffff;
+	border-bottom-color: #ffffff;
+	color: #ffffff;
+	background-color: #006600;
+
+	border-width: 2px;
+	cursor: pointer;	
+}
+
+/*EndNavBarStyle*/
+
+a{
+	color: #0000ff;
+}
+
+a:visited{
+	color: #0000cc;
+}
+
+a:hover{
+	color: #0000ff;
+}
+
+div.CardStyle {
+	position: absolute;
+	font-family: Geneva,Arial;
+	font-size: small;
+	padding: 5px;
+	border-style: solid;
+	border-width: 1px;
+	color: #000000;
+	background-color: #ffffff;
+	left: -50px;
+	top: -50px;
+	overflow: visible;
+}
+
+.rtl{
+	text-align: right;
+	font-size: large;
+}
+
+
+</style>
+
+
+<script type="text/javascript">
+
+
+
+// BrowserCheck Object
+
+function BrowserCheck() {
+	var b = navigator.appName;
+	this.mac = (navigator.appVersion.indexOf('Mac') != -1);
+	if (b=="Netscape") this.b = 'ns';
+	else if (b=="Microsoft Internet Explorer") this.b = 'ie';
+	else this.b = b;
+	this.ns = (this.b == 'ns');
+	this.ie = (this.b == 'ie');
+	this.version = navigator.appVersion;
+	if (this.b == 'ie'){
+		var x = this.version.indexOf('MSIE ') + 5;
+		var vnum = '';
+
+		while ((this.version.charAt(x) > -1)&&(this.version.charAt(x) < 10)){
+			vnum += this.version.charAt(x);
+			x++;
+		}
+		this.v = parseInt(vnum);
+	}
+	else{
+		this.v = parseInt(this.version);
+	}
+	if (this.ns&&(this.v == 5)){
+		this.v = 6;
+	}
+	this.min = (this.v > 5);
+}
+
+is = new BrowserCheck();
+
+if ((is.min == false)||(is.ie5mac)){
+	alert('Your browser can\'t handle this page. You need NS6+ or IE6+ on Windows, or NS6+ on Mac.');
+}
+
+function PageDim(){
+//Get the page width and height
+	this.W = 600;
+	this.H = 400;
+	if (is.ns) this.W = window.innerWidth;
+	if (is.ie) this.W = document.body.clientWidth;
+	if (is.ns) this.H = window.innerHeight;
+	if (is.ie) this.H = document.body.clientHeight;
+}
+
+var pg = null;
+var InGap = false;
+
+function SuppressBackspace(e){ 
+	if (InGap == true){
+		return;
+	}
+	 if (is.ns) {
+		thisKey = e.keyCode;
+	}
+	else {
+		thisKey = window.event.keyCode;
+	}
+
+	var Suppress = false;
+
+	if (thisKey == 8) {
+		Suppress = true;
+	}
+
+	if (Suppress == true){
+		if (is.ie){
+			window.event.returnValue = false;	
+			window.event.cancelBubble = true;
+		}
+		else{
+			e.preventDefault();
+		}
+	}
+}
+
+var NavLightColor = '#ffffff';
+var NavShadeColor = '#006600';
+var NavBarColor = '#ffffff';
+var FuncLightColor = '#ffffff';
+var FuncShadeColor = '#006600';
+var ExBGColor = '#ffffff';
+
+function NavBtnOver(Btn){
+	Btn.style.padding = '1px 3px 3px 1px';
+	Btn.style.borderLeftColor = NavLightColor;
+	Btn.style.borderTopColor = NavLightColor;
+	Btn.style.borderRightColor = NavShadeColor;
+	Btn.style.borderBottomColor = NavShadeColor;
+}
+
+function NavBtnOut(Btn){
+	Btn.style.borderColor = NavBarColor;
+	Btn.style.padding = '2px 2px 2px 2px';
+}
+
+function NavBtnDown(Btn){
+	Btn.style.borderLeftColor = NavShadeColor;
+	Btn.style.borderTopColor = NavShadeColor;
+	Btn.style.borderRightColor = NavLightColor;
+	Btn.style.borderBottomColor = NavLightColor;
+	Btn.style.padding = '3px 1px 1px 3px';
+}
+
+function FuncBtnOver(Btn){
+	Btn.style.padding = '2px 7px 4px 5px';
+	Btn.style.borderLeftColor = FuncLightColor;
+	Btn.style.borderTopColor = FuncLightColor;
+	Btn.style.borderRightColor = FuncShadeColor;
+	Btn.style.borderBottomColor = FuncShadeColor;
+}
+
+function FuncBtnOut(Btn){
+	Btn.style.borderColor = '#ffffff';
+	Btn.style.padding = '3px 6px 3px 6px';
+}
+
+function FuncBtnDown(Btn){
+	Btn.style.borderLeftColor = FuncShadeColor;
+	Btn.style.borderTopColor = FuncShadeColor;
+	Btn.style.borderRightColor = FuncLightColor;
+	Btn.style.borderBottomColor = FuncLightColor;
+	Btn.style.padding = '4px 5px 2px 7px';
+}
+
+var topZ = 100;
+
+var CurrentBox = -1;
+var Feedback = '';
+var CluesAcross = 'Horizontais:';
+var CluesDown = 'Verticais:';
+var Correct = 'Certo.';
+var Incorrect = 'Algumas das suas respostas estão incorrectas ou ainda não completou todos os quadrados. Os quadrados incorrectos foram apagados.'; 
+var GiveHint = '';
+var YourScoreIs = 'A sua pontuação é:';
+var BuiltGrid = '';
+var BuiltExercise = '';
+var Penalties = 0;
+var FirstShow = true;
+var ReadingURL = '[ReadingURL]';
+var TempReading = '';
+var Score = 0;
+
+var CurrBoxElement = null;
+var StartTime = (new Date()).toLocaleString();
+var HPNStartTime = (new Date()).getTime();
+var Finished = false;
+var SubmissionTimeout = 30000;
+
+
+
+var GridOpener = '<table border="1" style="margin: auto;" cellpadding="0" cellspacing="0">';
+var GridRowOpener = '<tr>';
+var GridRowCloser = '</tr>';
+
+//Na proxima linha muda a cor de fundo da cruzadinha (bgcolor)
+
+var BlankCell = '<td bgcolor="#0B0022" width="30" height="30">&nbsp;</td>';
+var LetterOnlyCell = '<td bgcolor="#ffffff" width="30" height="30" align="center" valign="middle"><span class="GridLetter">[Letter]</span></td>';
+var NumLetterCell = '<td bgcolor="#ffffff" style="cursor: pointer; cursor: hand;" width="30" height="30" align="center" valign="top" onclick="ShowClue([ClueNum],[x],[y])"><sup><a href="javascript:DoNothing()" onclick="ShowClue([ClueNum],[x],[y])">[ClueNum]</a></sup>&nbsp;<span class="GridLetter">[Letter]</span></td>';
+
+var GridCloser = '</table></center><br />';
+
+var GetAnswerOpener = '<form name="AnswerForm" action="" onSubmit="return false;">';
+GetAnswerOpener += '<table border="0" align="center" cellpadding="2" cellspacing="2">';
+
+
+var GetAnswer = '<tr><td valign="top"><span class="ClueText">[ThisClue]</span></td>';
+GetAnswer += '<td valign="top"><input type="text" class="AnswerBox" name="[BoxName]" size="[AnsLength]" maxlength="[AnsLength]" onfocus="InGap=true;" /></td>';
+
+GetAnswer += '<td valign="top"><button class="FunctionButton"  onfocus="FuncBtnOver(this)" onmouseover="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOver(this)" onclick="EnterAnswer(document.AnswerForm.[BoxName].value,[boolAcross],[AnsLength],[x],[y])">';
+GetAnswer += '&nbsp;Escrever&nbsp;</button></td>';
+
+
+GetAnswer += '<td valign="top"><button class="FunctionButton"  onfocus="FuncBtnOver(this)" onmouseover="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOver(this)"  onclick="ShowHint([boolAcross],[x],[y],\'document.AnswerForm.[BoxName]\')">';
+GetAnswer += '&nbsp;Ajuda&nbsp;</span></td>';
+
+
+GetAnswer += '</tr>';
+
+var GetAnswerCloser = '</table></form>';
+
+function WriteFeedback(Feedback){
+	var Output = Feedback + '<br /><br />';
+	document.getElementById('FeedbackContent').innerHTML = Output;
+	var FDiv = document.getElementById('FeedbackDiv');
+//Calculate and set its left setting
+	topZ++;
+	FDiv.style.zIndex = topZ;
+
+//Position the feedback div
+	pg = new PageDim();
+	FDiv.style.left = Math.floor(pg.W/3) + 'px';
+	FDiv.style.width = Math.floor(pg.W/3) + 'px';
+//Set the top again in case the window has been resized
+	if (is.ns){
+		FDiv.style.top = Math.floor(pg.H/3) + window.pageYOffset + 'px';
+	}
+	else{
+		FDiv.style.top = Math.floor(pg.H/3) + document.body.scrollTop + 'px';
+	}
+	FDiv.style.display = 'block';
+	document.getElementById('FeedbackOKButton').focus();
+
+
+
+	InGap = false;
+}
+
+function HideFeedback(){
+	document.getElementById('FeedbackContent').innerHTML = '';
+	document.getElementById('FeedbackDiv').style.display='none';
+	FocusAButton();
+	if (Finished == true){
+		Finish();
+	}
+}
+
+function FocusAButton(){
+	if (document.getElementById('CheckButton1') != null){
+		document.getElementById('CheckButton1').focus();
+	}
+	else{
+		if (document.getElementById('CheckButton2') != null){
+			document.getElementById('CheckButton2').focus();
+		}
+		else{
+			document.getElementsByTagName('button')[0].focus();
+		}
+	}
+}
+
+function WriteToInstructions(Feedback) {
+	Feedback = '<span class="FeedbackText">' + Feedback + '</span>';
+	document.getElementById('InstructionsDiv').innerHTML = Feedback;
+
+}
+
+function WriteClue(ClueText) {
+	document.getElementById('ClueDiv').innerHTML = ClueText;
+
+}
+
+
+
+
+function StartUp(){
+//IE bug avoidance -- remove bottom navbar
+	if (is.ie){
+		if (document.getElementById('BottomNavBar') != null){
+			document.getElementById('TheBody').removeChild(document.getElementById('BottomNavBar'));
+		}
+	}
+
+	if (is.ie){
+		document.attachEvent('onkeydown',SuppressBackspace);
+		window.attachEvent('onkeydown',SuppressBackspace);
+	}
+	else if (is.ns){
+		window.addEventListener('keypress',SuppressBackspace,false);
+	}
+
+
+
+
+
+	BuildExercise();
+	DisplayExercise();
+
+
+}
+
+function BuildExercise(){
+	var OutString = '';
+	var Temp = '';
+	var GridStuff = GridOpener;	
+
+	for (var i=0; i<L.length; i++){
+		GridStuff += GridRowOpener;
+		for (var j=0; j<L[i].length; j++){
+//If the cell is blank, add a black cell
+			if (L[i][j] == ''){
+				GridStuff += BlankCell;
+			}
+//else there's a letter there
+			else{
+//If there's a clue number, add it
+				if (C[i][j] > 0){
+					Temp = NumLetterCell;
+					Temp = ReplaceStuff('[ClueNum]', C[i][j], Temp);
+//Add location info
+					Temp = ReplaceStuff('[x]', i, Temp);
+					Temp = ReplaceStuff('[y]', j, Temp);
+				}
+//Otherwise add a blank cell
+				else{
+					Temp = LetterOnlyCell;
+				}
+
+//If the cell is already answered, add the letter from the Guess array
+				if (G[i][j] != ''){
+					Temp = ReplaceStuff('[Letter]', G[i][j], Temp);
+				}
+//Otherwise, put in a non-breaking space
+				else{
+					Temp = ReplaceStuff('[Letter]', '&nbsp;', Temp);
+				}
+				GridStuff += Temp;
+			}
+		}
+		GridStuff += GridRowCloser;
+	}
+
+	GridStuff += GridCloser;
+
+//Put the final pieces together
+	OutString = GridStuff;
+	BuiltExercise = OutString;
+}
+
+function DisplayExercise(){
+//Build the output string
+	var OutString = '';
+	OutString += BuiltExercise;
+
+//Write it to the main div
+	document.getElementById('GridDiv').innerHTML = OutString;
+
+
+}
+
+function BuildClue(ClueNum,x,y,Across){
+	var OutString = '';
+	if (Across == true){
+		if (ClueNum >= A.length){
+			return '';
+		}	
+		if (A[ClueNum] == null){
+			return '';
+		}
+		
+		OutString = GetAnswer;
+		OutString = ReplaceStuff('[ThisClue]', ClueNum + '. ' + A[ClueNum], OutString);
+		OutString = ReplaceStuff('[BoxName]', 'BA'+ClueNum, OutString);
+//Find out how long the answer is
+		AnsLength = 0;
+		i = x;
+		j = y;
+		while (j<L[i].length){
+			if (L[i][j] != ''){
+				AnsLength++;
+			}
+			else{
+				break;
+			}
+			j++;
+		}
+		OutString = ReplaceStuff('[AnsLength]', AnsLength, OutString);
+		OutString = ReplaceStuff('[boolAcross]', 'true', OutString);
+	}
+	else{
+		if (ClueNum >= D.length){
+			return '';
+		}	
+		if (D[ClueNum] == null){
+			return '';
+		}
+		
+		OutString = GetAnswer;
+		OutString = ReplaceStuff('[ThisClue]', ClueNum + '. ' + D[ClueNum], OutString);
+		OutString = ReplaceStuff('[BoxName]', 'BD'+ClueNum, OutString);
+//Find out how long the answer is
+		AnsLength = 0;
+		i = x;
+		j = y;
+		while (i<L.length){
+			if (L[i][j] != ''){
+				AnsLength++;
+			}
+			else{
+				break;
+			}
+			i++;
+		}
+		OutString = ReplaceStuff('[AnsLength]', AnsLength, OutString);
+		OutString = ReplaceStuff('[boolAcross]', 'false', OutString);
+	}
+	OutString = ReplaceStuff('[x]', x ,OutString);
+	OutString = ReplaceStuff('[y]', y, OutString);
+	return OutString;
+}
+
+function ShowClue(ClueNum,x,y){
+	var OutString = '';
+	var Temp = '';
+	var ThisClue = '';
+	var AnsLength = 0;
+	var i;
+	var j;
+	CurrBoxElement = ClueNum;
+	if (A[ClueNum] != null){
+		ThisClue = GetAnswer;
+		Temp = 'Horizontais: ' + ClueNum + '. ' + A[ClueNum];
+		ThisClue = ReplaceStuff('[ThisClue]', Temp, ThisClue);		
+		OutString += ThisClue;
+		OutString = ReplaceStuff('[BoxName]', 'BA'+ClueNum, OutString);
+//Find out how long the answer is
+		AnsLength = 0;
+		i = x;
+		j = y;
+		while (j<L[i].length){
+			if (L[i][j] != ''){
+				AnsLength++;
+			}
+			else{
+				break;
+			}
+			j++;
+		}
+		OutString = ReplaceStuff('[AnsLength]', AnsLength, OutString);
+		OutString = ReplaceStuff('[boolAcross]', 'true', OutString);
+	}
+	if (D[ClueNum] != null){
+		ThisClue = GetAnswer;
+		Temp = 'Verticais: ' + ClueNum + '. ' + D[ClueNum];
+		ThisClue = ReplaceStuff('[ThisClue]', Temp, ThisClue);
+		OutString += ThisClue;
+		OutString = ReplaceStuff('[BoxName]', 'BD'+ClueNum, OutString);
+//Find out how long the answer is
+		AnsLength = 0;
+		i = x;
+		j = y;
+		while (i<L.length){
+			if (L[i][j] != ''){
+				AnsLength++;
+			}
+			else{
+				break;
+			}
+			i++;
+		}
+		OutString = ReplaceStuff('[AnsLength]', AnsLength, OutString);
+		OutString = ReplaceStuff('[boolAcross]', 'false', OutString);
+	}
+	OutString = GetAnswerOpener + OutString + GetAnswerCloser;
+	OutString = ReplaceStuff('[x]', x ,OutString);
+	OutString = ReplaceStuff('[y]', y, OutString);
+	WriteClue(OutString); 
+	if (eval('document.AnswerForm.BA' + ClueNum) != null){
+		eval('document.AnswerForm.BA' + ClueNum).focus();
+	}
+	else{
+		if (eval('document.AnswerForm.BD' + ClueNum) != null){
+			eval('document.AnswerForm.BD' + ClueNum).focus();
+		}
+	}
+}
+
+function EnterAnswer(Guess,Across,AnsLength,x,y){
+	Guess = Guess.toUpperCase();
+
+	var i=x;
+	var j=y;
+	var Letter = 0;
+	while (Letter < AnsLength){
+		if (Letter < Guess.length){
+			G[i][j] = Guess.charAt(Letter);
+		}
+		if (Across == true){
+			j++;
+		}
+		else{
+			i++;
+		}
+		Letter++;
+	}
+
+	BuildExercise();
+	DisplayExercise();
+	InGap = false;
+	CurrBox = null;
+}
+
+function ShowHint(Across,x,y,BoxName){
+	var i=x;
+	var j=y;
+	var OutString = '';
+	if (Across==true){
+		while (j<L[i].length){
+			if (L[i][j] != ''){
+				OutString += L[i][j];
+				if (G[i][j] != L[i][j]){
+					G[i][j] = L[i][j];
+					Penalties++;
+					break;
+				}
+			}
+			else{
+				break;
+			}
+		j++;
+		}
+	}
+	else{
+		while (i<L.length){
+			if (L[i][j] != ''){
+				OutString += L[i][j];
+				if (G[i][j] != L[i][j]){
+					G[i][j] = L[i][j];
+					Penalties++;
+					break;
+				}
+			}
+			else{
+				break;
+			}
+		i++;
+		}
+	}
+	if (eval(BoxName) != null){
+		eval(BoxName).value = OutString;
+	}
+}
+
+function ReplaceStuff(Token, Replacement, InString){
+	var i = InString.indexOf(Token);
+	var FirstBit = '';
+	var LastBit = '';
+	while (i>-1){
+		FirstBit = InString.substring(0, i);
+		LastBit = InString.substring(i + Token.length, InString.length);	
+		InString = FirstBit + Replacement + LastBit;
+		i = InString.indexOf(Token);
+	}
+	return InString;
+}
+
+L = new Array();
+L[0] =  new Array('','','','','','','','','','','H','I','T','L','E','R','','','');
+L[1] =  new Array('','','','','','','','G','E','N','O','C','I','D','E','O','','','');
+L[2] =  new Array('','','','','','','','','E','S','L','A','V','O','S','','','','');
+L[3] =  new Array('','','','','S','O','L','U','Ç','Ã','O','-','F','I','N','A','L','','');
+L[4] =  new Array('','','','','','','','A','U','S','C','H','W','I','T','Z','','','');
+L[5] =  new Array('','','','','','','','A','R','I','A','N','A','','','','','','');
+L[6] =  new Array('','','','','','','','','','J','U','D','E','U','S','','','','');
+L[7] =  new Array('','','','','','','','','G','Á','S','','','','','','','','');
+L[8] =  new Array('','A','N','T','I','S','S','E','M','I','T','I','S','M','O','','','','');
+L[9] =  new Array('','','','','','','','','O','P','O','S','I','T','O','R','E','S','');
+
+C = new Array();
+C[0] =  new Array(0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0);
+C[1] =  new Array(0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0);
+C[2] =  new Array(0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0);
+C[3] =  new Array(0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+C[4] =  new Array(0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0,0,0,0);
+C[5] =  new Array(0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0);
+C[6] =  new Array(0,0,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0);
+C[7] =  new Array(0,0,0,0,0,0,0,0,8,0,0,0,0,0,0,0,0,0,0);
+C[8] =  new Array(0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+C[9] =  new Array(0,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0,0);
+
+
+G = new Array();
+G[0] = new Array('','','','','','','','','','','H','','','','','','','','');
+G[1] = new Array('','','','','','','','','','','O','','','','','','','','');
+G[2] = new Array('','','','','','','','','','','L','','','','','','','','');
+G[3] = new Array('','','','','','','','','','','O','','','','','','','','');
+G[4] = new Array('','','','','','','','','','','C','','','','','','','','');
+G[5] = new Array('','','','','','','','','','','A','','','','','','','','');
+G[6] = new Array('','','','','','','','','','','U','','','','','','','','');
+G[7] = new Array('','','','','','','','','','','S','','','','','','','','');
+G[8] = new Array('','','','','','','','','','','T','','','','','','','','');
+G[9] = new Array('','','','','','','','','','','O','','','','','','','','');
+
+
+A = new Array();
+A[1]='O Holocausto foi uma prática de perseguição política, étnica, religiosa e sexual estabelecida durante os anos de governo nazista de Adolf "______".';
+A[2]='O Holocausto foi um assassinato em massa, também conhecido como:';
+A[3]='Um povo que também foi alvo dos nazistas.';
+A[4]='A aniquilação também foi chamada de:';
+A[5]='Nome de uma rede de campos de concentração localizados no sul da Polônia.';
+A[6]='"Raça" que, de acordo com o líder nazista, deveria ser a única na Alemanha.';
+A[7]='Grupo que teve maior número de mortos nos campos de concentração.';
+A[8]='Substância mais usada para matar pessoas durante a Segunda Guerra Mundial.';
+A[9]='Nome dado ao preconceito ou hostilidade contra judeus baseada em ódio contra seu histórico étnico e/ou outro histórico.';
+A[10]='Eram alvos todos aqueles que poderiam ser "________" à política nazista.';
+
+D = new Array();
+
+
+function CheckAnswers(){
+
+	var AllCorrect = true;
+	var TotLetters = 0;
+	var CorrectLetters = 0;
+
+//Check each letter
+	for (var i=0; i<L.length; i++){
+		for (var j=0; j<L[i].length; j++){
+			if (L[i][j] != ''){
+				TotLetters++;
+				if (G[i][j] != L[i][j]){
+					G[i][j] = '';
+					AllCorrect = false;
+				}
+				else{
+					CorrectLetters++;
+				}
+			}
+		}
+	}
+
+	Score = Math.floor(((CorrectLetters-Penalties) * 100)/TotLetters);
+
+//Compile the output
+	var Output = '';
+
+	if (AllCorrect == true){
+		WriteClue('&nbsp;');
+		Output = Correct + '<br />';
+	}
+
+	Output += YourScoreIs + ' ' + Score + '%.<br />';
+	if (AllCorrect == false){
+		Output += Incorrect;
+		Penalties++;
+	}
+	BuildExercise();
+	WriteFeedback(Output);
+	WriteToInstructions(Output);
+
+
+		
+	
+	if (AllCorrect == true){
+
+		Finished = true;
+		setTimeout('Finish()', SubmissionTimeout);
+		return;
+	}
+
+	DisplayExercise();
+}
+
+
+function DoNothing(){}
+
+function Finish(){
+//If there's a form, fill it out and submit it
+	if (document.store != null){
+		Frm = document.store;
+		Frm.starttime.value = HPNStartTime;
+		Frm.endtime.value = (new Date()).getTime();
+		Frm.mark.value = Score;
+		Frm.submit();
+	}
+}
+
+
+</script>
+
+
+</head>
+
+<body onload="StartUp()" id="TheBody">
+
+<div class="conteiner" id="conteiner">
+
+		<span class="ExerciseTitle"><b><font color="white" face="Arial" size="5">Atividade de Fixação</font></b></span><br />
+		<span class="ExerciseSubtitle"><b><font color="white" face="Arial" size="3">Cruzadinha sobre o Holocausto</font></b></span><br />	
+
+
+
+<div id="InstructionsDiv" class="StdDiv">
+	<p id="Instructions"><font face="times new roman" size="3">Clique em um número da cruzadinha para ver a pista e escrever a palavra correspondente. Se tiver dificuldades, clique no botão "Ajuda" para obter uma letra. Depois de completar esta atividade, clique em "Verificar" para saber a sua pontuação. Não considere acentos e nem espaços entre palavras.</font><br /></p>
+</div>
+
+
+
+<div id="ClueDiv" class="StdDiv">&nbsp;
+</div>
+
+	<div id="MainDiv" class="StdDiv">
+
+<button id="CheckButton1" class="FuncButton" onmouseover="FuncBtnOver(this)" onfocus="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onblur="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOver(this)" onclick="CheckAnswers()">&nbsp;Verificar&nbsp;</button>
+
+<div id="GridDiv" style="margin-top: 10px;">
+
+</div>
+
+
+
+<div class="Feedback" id="FeedbackDiv">
+<div class="FeedbackText" id="FeedbackContent"></div>
+
+<button id="FeedbackOKButton" class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOver(this)" onclick="HideFeedback(); return false;">&nbsp;OK&nbsp;</button>
+
+</div>
+</div>
+</body>
+</html>
