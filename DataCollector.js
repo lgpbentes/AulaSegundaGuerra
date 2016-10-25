@@ -1,6 +1,8 @@
 var debug = true;
 var timer;
-var currentScreen = "conteudo.html";
+var currentScreen = "";
+var idClass = "";
+
 var multioption = {
     status: false,
     id: "Q1-easy",
@@ -10,7 +12,7 @@ var multioption = {
 onload =  function(e){
 
 	var html = document.querySelectorAll("html");
-
+    currentScreen = e.target.baseURI.split("/").slice(-1)[0];
 	for (var i=0;  i < html.length; i++) {
 		html[i].addEventListener("click", listenClick);
 	}
@@ -22,6 +24,7 @@ function overflowTimer(){
    // idTela = getCookie("screen");
     var timestamp = new Date().getTime();
 
+    if (currentScreen == "questionario.html" && idClass == "") idClass = "Q:1:H:1-1";
     if(debug) {
        /* console.log("-------after two seconds----------");
         console.log("DataCollector timestamp: "+timestamp);
@@ -38,7 +41,7 @@ function overflowTimer(){
             x: null,
             y: null,
        //     id: idTela,
-            classId: null
+            classId: idClass
         },
         function(data, status){
             //console.log("PLAYER------Data: " + data + "\nStatus: " + status);
@@ -127,7 +130,7 @@ function listenClick(e){
       tag: e.target.localName,
       x:e.screenX,
       y:e.screenY,
-      alternativaSelecionada: e.target.defaultValue,
+     // alternativaSelecionada: e.target.defaultValue,
 //      id: idTela,
       classId: idClass
     },
