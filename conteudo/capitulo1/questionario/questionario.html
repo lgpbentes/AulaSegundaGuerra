@@ -423,13 +423,27 @@
 	}
 
 	function verificar() {
-		if (multioption.status == true && multioption.type == "question") {
+		console.log("idLog: "+multioption.id[0]);
+		console.log("idLog: "+multioption.id);
+
+		if (multioption.status == true && multioption.length == 4) {
+			
+			document.getElementById("D"+multioption.id[0].substring(1, multioption.id[0].length)).style.visibility = 'visible';
+			document.getElementById("C"+multioption.id[0].substring(1, multioption.id[0].length)).style.visibility = 'visible';
+
+			console.log("44idLog4: "+multioption.id[2]);
+			multioption.id = multioption.id[2];
+
 			document.getElementById('menuTroca').style.visibility = "visible";	
 
 			//document.getElementById('menuTroca').addEventListener('click',carregar(''));
-		}
-		else if (multioption.status == true && (multioption.type == "tip" || multioption.type == "content")) {
-			document.getElementById(multioption.id).style.visibility = 'visible';
+		} //str.substring(1, str.length);
+		else if (multioption.status == true && multioption.length == 2) {
+			document.getElementById("D"+multioption.id[0].substring(1, multioption.id[0].length)).style.visibility = 'visible';
+			multioption.status = false;
+		} else if (multioption.status == true && multioption.length == 3) {
+			document.getElementById("D"+multioption.id[0].substring(1, multioption.id[0].length)).style.visibility = 'visible';
+			document.getElementById("C"+multioption.id[0].substring(1, multioption.id[0].length)).style.visibility = 'visible';
 			multioption.status = false;
 		}
 	}
@@ -450,8 +464,10 @@
 		var idcapt = index[0];
 		var iditem = index[1];
 		var link;
+		console.log("PQP: "+idcapt);
 		var info = $.getJSON("../../../info.json", function(data) {
-			console.log(data);
+			console.log ("aquiPORRA");
+			console.log("dataC: " + data.chapter);
 			if(data.chapter == idcapt){
 				for (var j = 0; j < Object.keys(data['itens']).length - 1; j++) {
 					if(data['itens'][j]['id-item'] == vet[3]) {

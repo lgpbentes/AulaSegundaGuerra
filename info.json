@@ -2,133 +2,52 @@
 	"chapter": "1",
 	"total-questions": "3",
 	"title": "Consequências da 1ª Guerra Mundial",
-	"itens":[
-		{
-			"id-item": "1-1",
-			"title-item": "Os efeitos da Primeira Guerra Mundial", 
-			"href": "EfeitosPrimeiraGuerraMundial.pdf"
-		},
-		{
-			"id-item": "1-2",
-			"title-item": "Leitura: 1ª Guerra Mundial Consequências",
-			"href": "leitura1.html"
-		},
-		{
-			"id-item": "1-3",
-			"title-item": "Quebra da bolsa de valores",
-			"href": "quebrabolsa.html"		
-		},
-		{
-			"id-item": "1-4",
-			"title-item": "A Alemanha \"derrotada\"",
-			"href": "TratadoVersalhes.pdf"
-		},
-		{
-			"id-item": "1-5",
-			"title-item": "Atividade 1: Produção cultural",
-			"href": "atividade1.html"
-		},
-		{
-			"id-item": "1-6",
-			"title-item": "Mapa ilustrativo: A primeira guerra",
-			"href": "MapaIlustrativo.html"
-		},
-		{
-			"id-item": "1-7",
-			"title-item": "Questionário",
-			"href": "questionario.html",
-			"questions": 
-			[{
-				"id-question": "Q1-hard",
-				"right-answer": "b"
-			},
-			{
-				"id-question": "Q1-easy",
-				"right-answer": "a"
-			},
-			{
-				"id-question": "Q2-hard",
-				"right-answer": "b"
-			},
-			{
-				"id-question": "Q2-easy",
-				"right-answer": "c"
-			},
-			{
-				"id-question": "Q3-hard",
-				"right-answer": "b"
-			},
-			{
-				"id-question": "Q3-easy",
-				"right-answer": "e"
-			}]
-		}
-	]
-
-
-	"chapter": "2",
-	"total-questions": "3",
-	"title": "Revolução",
-	"itens":[
-		{
-			"id-item": "1-1",
-			"title-item": "O que significa Revolução?", 
-			"href": "revolucao_conceito.html"
-		},
-		{
-			"id-item": "1-2",
-			"title-item": "O que significa Revolução?",
-			"href": "revolucao_conceito.html"
-		},
-		{
-			"id-item": "1-3",
-			"title-item": "O que levou à revolução Russa?",
-			"href": "revolucao_russa.html"		
-		},
-		{
-			"id-item": "1-4",
-			"title-item": "O que levou à revolução Russa?",
-			"href": "revolucao_russa.html"
-		},
-		{
-			"id-item": "1-5",
-			"title-item": "O que levou à revolução Russa?",
-			"href": "revolucao_russa.html"
-		},
-		{
-			"id-item": "1-6",
-			"title-item": "O que levou à revolução Russa?",
-			"href": "revolucao_russa.html"
-		},
-		{
-			"id-item": "1-7",
-			"title-item": "Questionário",
-			"href": "questionario_revolucoes.html",
-			"questions": 
-			[{
-				"id-question": "Q1-hard",
-				"right-answer": "c"
-			},
-			{
-				"id-question": "Q1-easy",
-				"right-answer": "b"
-			},
-			{
-				"id-question": "Q2-hard",
-				"right-answer": "e"
-			},
-			{
-				"id-question": "Q2-easy",
-				"right-answer": "b"
-			},
-			{
-				"id-question": "Q3-hard",
-				"right-answer": "d"
-			},
-			{
-				"id-question": "Q3-easy",
-				"right-answer": "a"
-			}]
-		}
-	]
+	"itens": [{
+		"id-item": "1-1",
+		"title-item": "Os efeitos da Primeira Guerra Mundial",
+		"href": "c1-1.html"
+	}, {
+		"id-item": "1-2",
+		"title-item": "Leitura: 1ª Guerra Mundial Consequências",
+		"href": "cleitura1.html"
+	}, {
+		"id-item": "1-3",
+		"title-item": "Quebra da bolsa de valores",
+		"href": "cquebrabolsa.html"
+	}, {
+		"id-item": "1-4",
+		"title-item": "A Alemanha \"derrotada\"",
+		"href": "c1-4.html"
+	}, {
+		"id-item": "1-5",
+		"title-item": "Atividade 1: Produção cultural",
+		"href": "catividade1.html"
+	}, {
+		"id-item": "1-6",
+		"title-item": "Mapa ilustrativo: A primeira guerra",
+		"href": "cMapaIlustrativo.html"
+	}, {
+		"id-item": "1-7",
+		"title-item": "Questionário",
+		"href": "questionario.html",
+		"questions": [{
+			"id-question": "Q1-hard",
+			"right-answer": "b"
+		}, {
+			"id-question": "Q1-easy",
+			"right-answer": "a"
+		}, {
+			"id-question": "Q2-hard",
+			"right-answer": "b"
+		}, {
+			"id-question": "Q2-easy",
+			"right-answer": "c"
+		}, {
+			"id-question": "Q3-hard",
+			"right-answer": "b"
+		}, {
+			"id-question": "Q3-easy",
+			"right-answer": "e"
+		}]
+	}]
 }

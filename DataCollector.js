@@ -6,8 +6,8 @@ var idClass = "";
 var multioption = {
     status: false,
     id: "Q1-easy",
-    type: 'tip'
-}
+    len: "1",
+} 
 
 onload =  function(e){
 
@@ -45,23 +45,15 @@ function overflowTimer(){
         },
         function(data, status){
             //console.log("PLAYER------Data: " + data + "\nStatus: " + status);
-            d = data;
-            
-            if (d.recommendation[0].recommendation.charAt(0) == "D"){
-                multioption.status = true;
-                multioption.type = "tip";
-                multioption.id = d.recommendation[0].recommendation;
-            }
-            if (d.recommendation[0].recommendation.charAt(0) == "C") {
-                multioption.status = true;
-                multioption.type = "content";
-                multioption.id = d.recommendation[0].recommendation;
-            }
-            if (d.recommendation[0].recommendation.charAt(0) == "Q") {
-                multioption.status = true;
-                multioption.type = "question";
-                multioption.id = d.recommendation[0].recommendation;
+            response = data.recommendation[0].recommendation;
+            response = response.split(";");
+            console.log("response: " + response);
+            console.log("response len: " + response.length);
 
+            if (response.length > 1){
+                multioption.status = true;
+                multioption.length = response.length;
+                multioption.id = response;
             }
         });
 }
@@ -136,23 +128,16 @@ function listenClick(e){
     },
     function(data, status){
         // alert("Data: " + data + "\nStatus: " + status);
-        d = data;
-            
-        if (d.recommendation[0].recommendation.charAt(0) == "D"){
-            multioption.status = true;
-            multioption.type = "tip";
-            multioption.id = d.recommendation[0].recommendation;
-        }
-        if (d.recommendation[0].recommendation.charAt(0) == "C") {
-            multioption.status = true;
-            multioption.type = "content";
-            multioption.id = d.recommendation[0].recommendation;
-        }
-        if (d.recommendation[0].recommendation.charAt(0) == "Q") {
-            multioption.status = true;
-            multioption.type = "question";
-            multioption.id = "T" + d.recommendation[0].recommendation;
-        }
+             //console.log("PLAYER------Data: " + data + "\nStatus: " + status);
+            response = data.recommendation[0].recommendation;
+            response = response.split(";");
+            console.log("response: " + response);
+            console.log("response len: " + response.length);
+            if (response.length > 1){
+                multioption.status = true;
+                multioption.length = response.length;
+                multioption.id = response;
+            }
     });
 }
 
