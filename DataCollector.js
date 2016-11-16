@@ -94,7 +94,12 @@ function listenClick(e){
     clearInterval(timer);
     timer = setInterval(overflowTimer, 2000);
     currentScreen = e.target.baseURI.split("/").slice(-1)[0];
-    idClass = e.target.className;
+    
+    if (e.target.className == "modal fade"){
+        idClass = "Q" + idClass.substring(1, idClass.length); 
+    } else {
+        idClass = e.target.className;
+    }
     //idTela = getCookie("screen");
     var timestamp = new Date().getTime();
 

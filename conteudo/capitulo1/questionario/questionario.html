@@ -423,9 +423,8 @@
 	}
 
 	function verificar() {
-		console.log("idLog: "+multioption.id[0]);
 		console.log("idLog: "+multioption.id);
-
+		
 		if (multioption.status == true && multioption.length == 4) {
 			
 			document.getElementById("D"+multioption.id[0].substring(1, multioption.id[0].length)).style.visibility = 'visible';
@@ -464,9 +463,9 @@
 		var idcapt = index[0];
 		var iditem = index[1];
 		var link;
-		console.log("PQP: "+idcapt);
+		console.log("idcapt: "+idcapt);
 		var info = $.getJSON("../../../info.json", function(data) {
-			console.log ("aquiPORRA");
+			
 			console.log("dataC: " + data.chapter);
 			if(data.chapter == idcapt){
 				for (var j = 0; j < Object.keys(data['itens']).length - 1; j++) {
